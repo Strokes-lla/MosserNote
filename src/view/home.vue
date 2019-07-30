@@ -6,6 +6,7 @@
     <p @click="Jump('/Promise')">Promise</p>
     <p @click="Jump('/Class')">Class</p>
     <p @click="Jump('/vuex')">vuex</p>
+    <p @click="Jump('/Integration')">Integration</p>
   </div>
 </template>
 

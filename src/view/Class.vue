@@ -200,26 +200,26 @@
     }
   }
 
-  function f(x,y) {
-    this.x=x;
-    this.y=y;
-  }
-  f.prototype.ss=function () {
-    return this.x
-  };
-  let F=new f(1,2);
-  console.log('==========='+F.ss());
-
-
-  function prot(v,k) {
-    this.name=v;
-    this.age=k
-  }
-  prot.prototype.cos=function () {
-    console.log(this.name);
-    console.log(this.age)
-  };
-  let pro = new prot('yy','18');
+  // function f(x,y) {
+  //   this.x=x;
+  //   this.y=y;
+  // }
+  // f.prototype.ss=function () {
+  //   return this.x
+  // };
+  // let F=new f(1,2);
+  // // console.log('==========='+F.ss());
+  //
+  //
+  // function prot(v,k) {
+  //   this.name=v;
+  //   this.age=k
+  // }
+  // prot.prototype.cos=function () {
+  //   console.log(this.name);
+  //   console.log(this.age)
+  // };
+  // let pro = new prot('yy','18');
 </script>
 
 <style lang="less" scoped>

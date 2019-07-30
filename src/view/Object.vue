@@ -162,7 +162,7 @@
       // var Li = new person('LiMing');
       //
       // console.log(Li)
-      console.log(this.$store.state.token)
+      console.log(this.$store.state.token);
     }
   }
 </script>

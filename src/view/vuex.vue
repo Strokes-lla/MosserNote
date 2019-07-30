@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper" >
+  <div class="box_warpper">
     <p>{{$store.state.stateA.token}}</p>
     <p @click="puls">{{token}}</p>
     <p>{{message}}</p>
@@ -9,17 +9,15 @@
 
 <script>
   import {mapState, mapGetters, mapActions, createNamespacedHelpers} from "vuex"
-
+  // let mapActionsA=createNamespacedHelpers('stateA').mapActions;
   export default {
     data() {
-      return {
-      }
+      return {}
     },
-    watch:{
-    },
+    watch: {},
     filters: {},
     methods: {
-      ...createNamespacedHelpers('stateA').mapActions(['actionsToken','actionsUninstall']),
+      ...createNamespacedHelpers('stateA').mapActions(['actionsToken', 'actionsUninstall']),
       ...mapActions(['stateA/actionsTest', 'someAction']),
       // stateA下的actionsTest 可用于State Getters
       ...mapActions('stateA', ['actionsTest']),
@@ -33,10 +31,10 @@
 
       //model写法
       message: {
-        get () {
+        get() {
           return this.$store.state.stateA.message
         },
-        set (value) {
+        set(value) {
           this.$store.commit('stateA/saveMessage', value)
         }
       },

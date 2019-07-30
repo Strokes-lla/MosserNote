@@ -8,6 +8,7 @@ import Promise from '@/view/Promise'
 import Class from '@/view/Class'
 import personal from '@/view/personal'
 import vuex from '@/view/vuex'
+import Integration from '@/view/Integration'
 
 Vue.use(Router);
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/vuex',
       name: 'vuex',
       component: vuex
+    },
+    {
+      path: '/Integration',
+      name: 'Integration',
+      component: Integration
     },
   ]
 })
