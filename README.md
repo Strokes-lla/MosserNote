@@ -1,4 +1,4 @@
-# es6demo
+# MosserNote
 
 > A Vue.js project
 
