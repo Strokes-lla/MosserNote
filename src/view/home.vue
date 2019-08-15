@@ -24,13 +24,17 @@
     },
     components: {},
     mounted() {
+      // response.data.items.slice(0, 8).map(item => {
+      //   const { order_no: orderNo, price: prices, status: state } = item;
+      //   this.aa.push({ orderNo, prices, state })
+      // })
+
       // home.getData();
       // home.getHtml().then((res)=>{
       //   console.log(res)
       // })
     }
   }
-
 </script>
 
 <style lang="less" scoped>

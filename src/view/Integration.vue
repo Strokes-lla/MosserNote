@@ -1,6 +1,6 @@
 <template>
   <div class="box_warpper">
-    <div v-html="script"></div>
+    <div v-html="libraryHtml"></div>
   </div>
 </template>
 
@@ -8,7 +8,8 @@
   export default {
     data() {
       return {
-        script: ""
+        libraryHtml: "",
+        id: 10,
       }
     },
     filters: {},
@@ -50,8 +51,6 @@
       // let a=[1,2,3,4,5];
       // console.log(Math.max(...a))
 
-
-
       // arguments代表函数内所有的参数
       // let test = [[7, 8, 9, 0], 2, 3, 4, 5, 6];
 
@@ -63,11 +62,37 @@
       // f(test)
 
 
-      let obj={};
-      obj.__proto__.name="yy";
-      obj.age=18;
+      function ags() {
+        console.log(arguments)
+      }
 
+      let s = "123";
+      let z = "456";
 
+      ags`a s d ${s} as ${z}`;
+
+      // f(1,2,3,4,5)
+
+      // js 能精确显示的最大数值9007199254740992
+      // console.log(9007199254740993)
+
+      // 箭头函数没有this，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+      let obj = {
+        age: 18,
+        jian: () => {
+          console.log(this.age)
+        }
+      };
+
+      // obj.jian();
+
+     //  函数直接或间接调用自身称之为递归
+     //  function factorial(n) {
+     //    if (n === 1) return 1;
+     //    return n * factorial(n - 1);
+     //  }
+     //
+     // console.log(factorial(5))
     }
   }
 </script>

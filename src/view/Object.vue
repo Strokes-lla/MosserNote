@@ -32,9 +32,10 @@
     filters: {},
     methods: {
       change(index){
+        // this.arr[index]=9;
         // this.$set(object,key,value);
         this.$set(this.arr,index,9);
-        console.log(this.arr)
+        console.log(this.arr);
       },
       f(x, y) {
         return {x: x, y: y};
@@ -146,7 +147,6 @@
       // let { ...o3 } = o2;
       // console.log(o3);
       // console.log(o3.a);
-
 
       // var person = function(name){
       //   this.name = name

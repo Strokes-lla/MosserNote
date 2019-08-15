@@ -66,3 +66,8 @@
 
 ### github仓库管理
 **https://www.jianshu.com/p/6681695da45b**
+
+
+### three.js中文文档
+**http://www.hewebgl.com/article/articledir/1**
+
