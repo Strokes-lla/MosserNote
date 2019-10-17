@@ -9,6 +9,8 @@ import Class from '@/view/Class'
 import personal from '@/view/personal'
 import vuex from '@/view/vuex'
 import Integration from '@/view/Integration'
+import Set from '@/view/Set'
+import Proxy from '@/view/Proxy'
 
 Vue.use(Router);
 
@@ -18,17 +20,26 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: home
+      component: home,
     },
     {
       path: '/Object',
       name: 'Object',
-      component: Object
+      component: Object,
     },
     {
       path: '/ObjectFunction',
       name: 'ObjectFunction',
-      component: ObjectFunction
+      component: ObjectFunction,
+      // children: [{
+      //   path: '/ObjectFunction/Object',
+      //   name: 'Object',
+      //   component: Object
+      // },{
+      //   path: '/ObjectFunction/Symbol',
+      //   name: 'Symbol',
+      //   component: Symbol
+      // }]
     },
     {
       path: '/Symbol',
@@ -59,6 +70,16 @@ export default new Router({
       path: '/Integration',
       name: 'Integration',
       component: Integration
+    },
+    {
+      path: '/Set',
+      name: 'Set',
+      component: Set
+    },
+    {
+      path: '/Proxy',
+      name: 'Proxy',
+      component: Proxy
     },
   ]
 })

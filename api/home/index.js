@@ -7,6 +7,6 @@ export default {
   },
 
   getHtml(data) {
-    return instance.post(instance.wapUrl + "/getHtml", qs.stringify(data))
+    return instance.post("/getHtml", qs.stringify(data))
   },
 }

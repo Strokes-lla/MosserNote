@@ -3,7 +3,7 @@
     <p>{{$store.state.stateA.token}}</p>
     <p @click="puls">{{token}}</p>
     <p>{{message}}</p>
-    <input type="text" v-model="message">
+    <input type="text" @input="changeNum" v-model="message">
   </div>
 </template>
 
@@ -25,6 +25,9 @@
         let data = this.$store.state.token + "1";
         this.$store.commit("stateA/saveToken", data);
       },
+      changeNum(){
+        console.log(1)
+      }
     },
     computed: {
       // ...mapState(['token','todos']),

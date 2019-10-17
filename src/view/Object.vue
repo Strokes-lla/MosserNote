@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_warpper" style="width: 500px;height:500px;background: red">
     <p v-for="(item,index) in arr" @click="change(index)">{{item}}</p>
   </div>
 </template>
@@ -8,7 +8,7 @@
   export default {
     data() {
       return {
-        arr:[1,2,3,4,5,6,7],
+        arr: [1, 2, 3, 4, 5, 6, 7],
         obj: {},
         test: {
           ['h' + 'ello']() {
@@ -31,10 +31,10 @@
     },
     filters: {},
     methods: {
-      change(index){
+      change(index) {
         // this.arr[index]=9;
         // this.$set(object,key,value);
-        this.$set(this.arr,index,9);
+        this.$set(this.arr, index, 9);
         console.log(this.arr);
       },
       f(x, y) {
@@ -112,6 +112,7 @@
 
 
       // super 关键字  *****
+      // this关键字指向当前对象，super指向当前对象的原型对象同时可以访问父对象上的函数
       // const proto = {
       //   foo: 'hello'
       // };
@@ -162,7 +163,24 @@
       // var Li = new person('LiMing');
       //
       // console.log(Li)
-      console.log(this.$store.state.token);
+      // console.log(this.$store.state.token);
+
+      let data = {
+        age: 18,
+        sex: "n",
+        name: "yw"
+      };
+      // Object.setPrototypeOf(data, {
+      //   name:"yy",
+      //   cos() {
+      //     console.log(1)
+      //   }
+      // });
+      // console.log(Object.getPrototypeOf(data));
+      // console.log(data)
+
+      console.log(111111111111);
+
     }
   }
 </script>

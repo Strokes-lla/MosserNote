@@ -3,10 +3,12 @@
     <p @click="Jump('/Object')">Object扩展</p>
     <p @click="Jump('/ObjectFunction')">Object的新增方法</p>
     <p @click="Jump('/Symbol')">Symbol</p>
+    <p @click="Jump('/Set')">Set</p>
     <p @click="Jump('/Promise')">Promise</p>
     <p @click="Jump('/Class')">Class</p>
     <p @click="Jump('/vuex')">vuex</p>
     <p @click="Jump('/Integration')">Integration</p>
+    <p @click="Jump('/Proxy')">Proxy</p>
   </div>
 </template>
 

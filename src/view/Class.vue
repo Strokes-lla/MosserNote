@@ -39,7 +39,7 @@
         b: 2,
         c: 3
       };
-      console.log(obj.hasOwnProperty('a'))
+      console.log(obj.hasOwnProperty('a'));
 
 
       class Logger {

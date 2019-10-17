@@ -13,7 +13,8 @@
       }
     },
     filters: {},
-    methods: {},
+    methods: {
+    },
     components: {},
     mounted() {
       let arr = [1, 2, 3, 4, 5, 6];
@@ -41,7 +42,7 @@
 
       // testArr[1]="yw";
 
-      // 但也只能冻结外层对于数组中的对象无作用仍然可以修改
+      // 但也只能冻结外层，对于数组中的对象无作用仍然可以修改
       // testArr[0].name="yw";
 
       // console.log(testArr)
@@ -77,13 +78,13 @@
       // console.log(9007199254740993)
 
       // 箭头函数没有this，函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
-      let obj = {
-        age: 18,
-        jian: () => {
-          console.log(this.age)
-        }
-      };
-
+      // let obj = {
+      //   age: 18,
+      //   jian: () => {
+      //     console.log(this.age)
+      //   }
+      // };
+      //
       // obj.jian();
 
      //  函数直接或间接调用自身称之为递归
@@ -93,6 +94,16 @@
      //  }
      //
      // console.log(factorial(5))
+
+      let arrayLike = {
+        '1': 'a',
+        '0': 'b',
+        '2': 'c',
+        length: 3
+      };
+      // console.log(arrayLike.filter((x)=> x))
+      // console.log(Array.from(arrayLike))
+      // console.log([...arrayLike])
     }
   }
 </script>
