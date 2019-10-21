@@ -1,16 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import home from '@/view/home'
-import Object from '@/view/Object'
-import ObjectFunction from '@/view/ObjectFunction'
-import Symbol from '@/view/Symbol'
-import Promise from '@/view/Promise'
-import Class from '@/view/Class'
-import personal from '@/view/personal'
-import vuex from '@/view/vuex'
-import Integration from '@/view/Integration'
-import Set from '@/view/Set'
-import Proxy from '@/view/Proxy'
+
+//ECMAScript6
+import es6 from '@/view/ECMAScript6/es6'
+
+import Object from '@/view/ECMAScript6/sonPage/Object'
+import ObjectFunction from '@/view/ECMAScript6/sonPage/ObjectFunction'
+import Symbol from '@/view/ECMAScript6/sonPage/Symbol'
+import Promise from '@/view/ECMAScript6/sonPage/Promise'
+import Class from '@/view/ECMAScript6/sonPage/Class'
+import personal from '@/view/ECMAScript6/sonPage/personal'
+import Set from '@/view/ECMAScript6/sonPage/Set'
+import Proxy from '@/view/ECMAScript6/sonPage/Proxy'
+import Reflect from '@/view/ECMAScript6/sonPage/Reflect'
+
+//vue
+import vuex from '@/view/Vue/vuex'
+
+//Integration
+import Integration from '@/view/Integration/Integration'
 
 Vue.use(Router);
 
@@ -21,6 +31,13 @@ export default new Router({
       path: '/',
       name: 'home',
       component: home,
+    },
+
+    //ECMAScript6
+    {
+      path: '/es6',
+      name: 'es6',
+      component: es6,
     },
     {
       path: '/Object',
@@ -62,16 +79,6 @@ export default new Router({
       component: personal
     },
     {
-      path: '/vuex',
-      name: 'vuex',
-      component: vuex
-    },
-    {
-      path: '/Integration',
-      name: 'Integration',
-      component: Integration
-    },
-    {
       path: '/Set',
       name: 'Set',
       component: Set
@@ -80,6 +87,25 @@ export default new Router({
       path: '/Proxy',
       name: 'Proxy',
       component: Proxy
+    },
+    {
+      path: '/Reflect',
+      name: 'Reflect',
+      component: Reflect
+    },
+
+    //Vue
+    {
+      path: '/vuex',
+      name: 'vuex',
+      component: vuex
+    },
+
+    //Integration
+    {
+      path: '/Integration',
+      name: 'Integration',
+      component: Integration
     },
   ]
 })
