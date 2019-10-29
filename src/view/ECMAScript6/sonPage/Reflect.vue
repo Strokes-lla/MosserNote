@@ -1,22 +1,47 @@
 <template>
-    <div class="box_warpper">
-    </div>
+  <div class="box_warpper">
+  </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {}
+  export default {
+    data() {
+      return {}
+    },
+    filters: {},
+    methods: {},
+    components: {},
+    mounted() {
+      let myObject = {
+        foo: 1,
+        bar: 2,
+        get baz() {
+          return this.foo + this.bar;
         },
-        filters: {},
-        methods: {},
-        components: {},
-        mounted() {
-        }
+      };
+      console.log(myObject.baz)
+      // Reflect.get(myObject, 'foo');// 1
+      // Reflect.get(myObject, 'bar');// 2
+      // Reflect.get(myObject, 'baz');// 3
+
+      let p = {
+        a: 'a'
+      };
+
+      let handler = {
+        get(target, key, value, receiver) {
+          console.log('get');
+          return Reflect.get(target, key)
+        },
+      };
+
+      let obj = new Proxy(p, handler);
+      console.log(obj.a)
     }
+  }
 </script>
 
 <style lang="less" scoped>
-    .box_warpper {
-    }
+  .box_warpper {
+  }
 </style>

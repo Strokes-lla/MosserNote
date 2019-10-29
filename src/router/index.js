@@ -22,6 +22,8 @@ import vuex from '@/view/Vue/vuex'
 //Integration
 import Integration from '@/view/Integration/Integration'
 
+//video
+import video from '@/view/video/index'
 Vue.use(Router);
 
 export default new Router({
@@ -106,6 +108,14 @@ export default new Router({
       path: '/Integration',
       name: 'Integration',
       component: Integration
+    },
+
+
+    //video
+    {
+      path: '/Video',
+      name: 'Video',
+      component: video
     },
   ]
 })

@@ -27,18 +27,20 @@
       });
 
       Promise.try(f => {
-        console.losg("f")
+        console.log("f")
       }).catch(err => {
         throw "语法错误" + err
       });
 
-      // new Promise((resolve, reject) => {
-      //   return resolve()
-      // }).then(() => {
-      //   console.log(3)
-      // }).catch(() => {
-      //   console.log(2)
-      // });
+
+      new Promise((resolve, reject) => {
+        return resolve()
+      }).then(() => {
+        console.log(3)
+      }).catch(() => {
+        console.log(2)
+      });
+
     }
   }
 </script>

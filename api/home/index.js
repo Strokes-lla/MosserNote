@@ -9,4 +9,8 @@ export default {
   getHtml(data) {
     return instance.post("/getHtml", qs.stringify(data))
   },
+
+  getVideo(data) {
+    return instance.post("/api/video/v1/cameras/previewURLs", data)
+  },
 }
