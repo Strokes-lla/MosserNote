@@ -15,6 +15,7 @@ import personal from '@/view/ECMAScript6/sonPage/personal'
 import Set from '@/view/ECMAScript6/sonPage/Set'
 import Proxy from '@/view/ECMAScript6/sonPage/Proxy'
 import Reflect from '@/view/ECMAScript6/sonPage/Reflect'
+import Iterator from '@/view/ECMAScript6/sonPage/Iterator'
 
 //vue
 import vuex from '@/view/Vue/vuex'
@@ -22,8 +23,6 @@ import vuex from '@/view/Vue/vuex'
 //Integration
 import Integration from '@/view/Integration/Integration'
 
-//video
-import video from '@/view/video/index'
 Vue.use(Router);
 
 export default new Router({
@@ -95,6 +94,11 @@ export default new Router({
       name: 'Reflect',
       component: Reflect
     },
+    {
+      path: '/Iterator',
+      name: 'Iterator',
+      component: Iterator
+    },
 
     //Vue
     {
@@ -108,14 +112,6 @@ export default new Router({
       path: '/Integration',
       name: 'Integration',
       component: Integration
-    },
-
-
-    //video
-    {
-      path: '/Video',
-      name: 'Video',
-      component: video
     },
   ]
 })

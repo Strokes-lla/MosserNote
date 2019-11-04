@@ -11,7 +11,11 @@
       }
     },
     filters: {},
-    methods: {},
+    methods: {
+      test() {
+        return 213
+      },
+    },
     components: {},
     mounted() {
       function timeout(ms) {
@@ -34,13 +38,21 @@
 
 
       new Promise((resolve, reject) => {
-        return resolve()
+        resolve(1123)
+        // reject()
       }).then(() => {
-        console.log(3)
+        console.log(x + 2);
+        console.log('a');
+      }).then(() => {
+        console.log('b');
       }).catch(() => {
-        console.log(2)
+        console.log('c');
       });
 
+
+      Promise.resolve(this.test()).then((data) => {
+        console.log(data)
+      })
     }
   }
 </script>
