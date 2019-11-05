@@ -9,7 +9,6 @@
     <p @click="Jump('/Proxy')">Proxy</p>
     <p @click="Jump('/Reflect')">Reflect</p>
     <p @click="Jump('/Iterator')">Iterator</p>
-
   </div>
 </template>
 

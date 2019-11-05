@@ -104,6 +104,15 @@
       // console.log(arrayLike.filter((x)=> x))
       // console.log(Array.from(arrayLike))
       // console.log([...arrayLike])
+
+
+      Number.prototype.testNum=function (val) {
+        console.log(val);
+        console.log(this)
+      };
+
+      let num=0.95;
+      num.testNum(5)
     }
   }
 </script>

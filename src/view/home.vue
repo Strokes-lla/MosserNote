@@ -3,7 +3,6 @@
     <p @click="Jump('/es6')">ECMAScript6</p>
     <p @click="Jump('/vuex')">vuex</p>
     <p @click="Jump('/Integration')">Integration</p>
-    <p @click="Jump('/video')">Video</p>
   </div>
 </template>
 

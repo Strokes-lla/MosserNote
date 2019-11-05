@@ -32,14 +32,13 @@
           const set = new Set([
             ['foo', 1],
             ['foo', 1],
-            a1,a2
+            // a1,a2
           ]);
           console.log(set);
 
           //不接受Object
           const m1 = new Map(set);
-          // console.log(m1);
-
+          console.log(m1);
 
 
         }

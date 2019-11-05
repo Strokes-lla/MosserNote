@@ -23,7 +23,7 @@
       // Reflect.get(myObject, 'foo');// 1
       // Reflect.get(myObject, 'bar');// 2
       // Reflect.get(myObject, 'baz');// 3
-
+      console.log(Reflect.has(myObject, 'foo'))
       let p = {
         a: 'a'
       };
