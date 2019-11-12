@@ -32,6 +32,7 @@
 <style lang="less" scoped>
   .box_warpper {
     p {
+      width:300px;
       color: #2C7FF1;
       text-decoration: underline;
       cursor: pointer;

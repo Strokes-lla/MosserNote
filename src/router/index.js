@@ -1,28 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import home from '@/view/home'
-
-//ECMAScript6
-import es6 from '@/view/ECMAScript6/es6'
-
-import Object from '@/view/ECMAScript6/sonPage/Object'
-import ObjectFunction from '@/view/ECMAScript6/sonPage/ObjectFunction'
-import Symbol from '@/view/ECMAScript6/sonPage/Symbol'
-import Promise from '@/view/ECMAScript6/sonPage/Promise'
-import Class from '@/view/ECMAScript6/sonPage/Class'
-import personal from '@/view/ECMAScript6/sonPage/personal'
-import Set from '@/view/ECMAScript6/sonPage/Set'
-import Proxy from '@/view/ECMAScript6/sonPage/Proxy'
-import Reflect from '@/view/ECMAScript6/sonPage/Reflect'
-import Iterator from '@/view/ECMAScript6/sonPage/Iterator'
-
-//vue
-import vuex from '@/view/Vue/vuex'
-
-//Integration
-import Integration from '@/view/Integration/Integration'
-
 Vue.use(Router);
 
 export default new Router({
@@ -31,87 +9,91 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: home,
+      component: () => import('@/view/home'),
     },
 
     //ECMAScript6
     {
       path: '/es6',
       name: 'es6',
-      component: es6,
+      component: () => import('@/view/ECMAScript6/es6'),
     },
     {
       path: '/Object',
       name: 'Object',
-      component: Object,
+      component: () => import('@/view/ECMAScript6/sonPage/Object'),
     },
     {
       path: '/ObjectFunction',
       name: 'ObjectFunction',
-      component: ObjectFunction,
+      component: () => import('@/view/ECMAScript6/sonPage/ObjectFunction'),
       // children: [{
       //   path: '/ObjectFunction/Object',
       //   name: 'Object',
-      //   component: Object
+      //   component: () => import('@/view/ECMAScript6/sonPage/Object'),
       // },{
       //   path: '/ObjectFunction/Symbol',
       //   name: 'Symbol',
-      //   component: Symbol
+      //   component: () => import('@/view/ECMAScript6/sonPage/Symbol'),
       // }]
     },
     {
       path: '/Symbol',
       name: 'Symbol',
-      component: Symbol
+      component: () => import('@/view/ECMAScript6/sonPage/Symbol'),
     },
     {
       path: '/Promise',
       name: 'Promise',
-      component: Promise
+      component: () => import('@/view/ECMAScript6/sonPage/Promise'),
     },
     {
       path: '/Class',
       name: 'Class',
-      component: Class
+      component: () => import('@/view/ECMAScript6/sonPage/Class'),
     },
     {
       path: '/personal',
       name: 'personal',
-      component: personal
+      component: () => import('@/view/ECMAScript6/sonPage/personal'),
     },
     {
       path: '/Set',
       name: 'Set',
-      component: Set
+      component: () => import('@/view/ECMAScript6/sonPage/Set'),
     },
     {
       path: '/Proxy',
       name: 'Proxy',
-      component: Proxy
+      component: () => import('@/view/ECMAScript6/sonPage/Proxy'),
     },
     {
       path: '/Reflect',
       name: 'Reflect',
-      component: Reflect
+      component: () => import('@/view/ECMAScript6/sonPage/Reflect'),
     },
     {
       path: '/Iterator',
       name: 'Iterator',
-      component: Iterator
+      component: () => import('@/view/ECMAScript6/sonPage/Iterator'),
     },
-
+    {
+      path: '/Generator',
+      name: 'Generator',
+      component: () => import('@/view/ECMAScript6/sonPage/Generator'),
+    },
     //Vue
     {
       path: '/vuex',
       name: 'vuex',
-      component: vuex
+      component: () => import('@/view/Vue/vuex'),
     },
 
     //Integration
     {
       path: '/Integration',
       name: 'Integration',
-      component: Integration
+      component: () => import('@/view/Integration/Integration'),
     },
   ]
 })
