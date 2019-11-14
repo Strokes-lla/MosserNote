@@ -1,17 +1,22 @@
 <template>
   <div id="app">
+    <v-header></v-header>
     <router-view/>
   </div>
 </template>
 
 <script>
+  import header from "@/components/header"
   export default {
     data() {
       return {}
     },
-    omponents: {},
+    components: {
+      'v-header':header
+    },
     methods: {},
-    mounted: function () {}
+    mounted() {
+    }
   }
 </script>
 
@@ -23,7 +28,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    overflow: auto;
+    /*overflow: auto;*/
     -webkit-overflow-scrolling: touch;
   }
 </style>

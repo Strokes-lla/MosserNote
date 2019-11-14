@@ -113,6 +113,17 @@
 
       let num=0.95;
       num.testNum(5)
+
+
+      try{
+        console.log('success');
+        throw new Error ('error')
+      }catch (e) {
+        console.log('1');
+        console.log(e)
+      }
+
+      // console.clear();
     }
   }
 </script>

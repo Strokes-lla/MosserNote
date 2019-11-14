@@ -27,7 +27,7 @@
         length: 3,
         [Symbol.iterator]: Array.prototype[Symbol.iterator]
       };
-      console.log(obj[Symbol.iterator]().next())
+      console.log(obj[Symbol.iterator]().next());
       for (let item of obj) {
         console.log(item)
       }
@@ -57,12 +57,12 @@
               }
             },
             return() {
+              console.log('return');
               return {done: true};
             }
           }
         }
       };
-
       for (let item of yy) {
         console.log(item);
         if (item === 18) {
