@@ -14,11 +14,6 @@ export default new Router({
 
     //ECMAScript6
     {
-      path: '/es6',
-      name: 'es6',
-      component: () => import('@/view/ECMAScript6/es6'),
-    },
-    {
       path: '/Object',
       name: 'Object',
       component: () => import('@/view/ECMAScript6/sonPage/Object'),
@@ -94,6 +89,12 @@ export default new Router({
       path: '/Integration',
       name: 'Integration',
       component: () => import('@/view/Integration/Integration'),
+    },
+    //heightcharts
+    {
+      path: '/highcharts',
+      name: 'highcharts',
+      component: () => import('@/view/highcharts'),
     },
   ]
 })

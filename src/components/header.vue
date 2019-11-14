@@ -63,6 +63,10 @@
           name: 'Integration',
           path: '/Integration',
           show: false,
+        }, {
+          name: 'highcharts',
+          path: '/highcharts',
+          show: false,
         }]
       }
     },
@@ -98,7 +102,7 @@
           border-radius: 5px;
           box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
           background: white;
-
+          z-index:9999;
           div {
             padding: 20px;
             p {
