@@ -23,6 +23,7 @@
       // home.getHtml().then((res)=>{
       //   console.log(res)
       // })
+      console.log("Show Time!!!")
     }
   }
 </script>
