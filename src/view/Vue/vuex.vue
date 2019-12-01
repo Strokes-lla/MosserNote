@@ -25,7 +25,7 @@
         let data = this.$store.state.token + "1";
         this.$store.commit("stateA/saveToken", data);
       },
-      changeNum(){
+      changeNum() {
         console.log(1)
       }
     },

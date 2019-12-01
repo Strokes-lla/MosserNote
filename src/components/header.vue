@@ -6,68 +6,23 @@
         <span @click="Jump(item.path)" class="f16 pointer transition">{{item.name}}</span>
         <div v-if="item.show" :class="showIndex===index ? 'show':'hide'" class="menu ovhide show transition __absolute">
           <div>
-            <p @click.stop="Jump(val.path)" class="f14 pointer transition" v-for="(val,num) in item.sonList">{{val.name}}</p>
+            <p @click.stop="Jump(val.path)" class="f14 pointer transition" v-for="(val,num) in item.sonList">
+              {{val.name}}</p>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
+  import list from '../../static/list';
+
   export default {
     data() {
       return {
         showIndex: '',
-        list: [{
-          name: 'ECMAScript6',
-          path: '/es6',
-          show: true,
-          sonList: [{
-            name: 'Object扩展',
-            path: '/Object'
-          }, {
-            name: 'Object的新增方法',
-            path: '/ObjectFunction'
-          }, {
-            name: 'Symbol',
-            path: '/Symbol'
-          }, {
-            name: 'Set',
-            path: '/Set'
-          }, {
-            name: 'Promise',
-            path: '/Promise'
-          }, {
-            name: 'Class',
-            path: '/Class'
-          }, {
-            name: 'Proxy',
-            path: '/Proxy'
-          }, {
-            name: 'Reflect',
-            path: '/Reflect'
-          }, {
-            name: 'Iterator',
-            path: '/Iterator'
-          }, {
-            name: 'Generator',
-            path: 'Generator'
-          }]
-        }, {
-          name: 'vuex',
-          path: '/vuex',
-          show: false,
-        }, {
-          name: 'Integration',
-          path: '/Integration',
-          show: false,
-        }, {
-          name: 'highcharts',
-          path: '/highcharts',
-          show: false,
-        }]
+        list: list
       }
     },
     filters: {},
@@ -102,9 +57,11 @@
           border-radius: 5px;
           box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
           background: white;
-          z-index:9999;
+          z-index: 9999;
+
           div {
             padding: 20px;
+
             p {
               white-space: nowrap;
               color: #586069;

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "ECMAScript6",
+    "path": "/es6",
+    "show": true,
+    "sonList": [
+      {
+        "name": "Object扩展",
+        "path": "/Object"
+      },
+      {
+        "name": "Object的新增方法",
+        "path": "/ObjectFunction"
+      },
+      {
+        "name": "Symbol",
+        "path": "/Symbol"
+      },
+      {
+        "name": "Set",
+        "path": "/Set"
+      },
+      {
+        "name": "Promise",
+        "path": "/Promise"
+      },
+      {
+        "name": "Class",
+        "path": "/Class"
+      },
+      {
+        "name": "Proxy",
+        "path": "/Proxy"
+      },
+      {
+        "name": "Reflect",
+        "path": "/Reflect"
+      },
+      {
+        "name": "Iterator",
+        "path": "/Iterator"
+      },
+      {
+        "name": "Generator",
+        "path": "Generator"
+      }
+    ]
+  },
+  {
+    "name": "vuex",
+    "path": "/vuex",
+    "show": false
+  },
+  {
+    "name": "Integration",
+    "path": "/Integration",
+    "show": false
+  },
+  {
+    "name": "highcharts",
+    "path": "/highcharts",
+    "show": false
+  }
+]

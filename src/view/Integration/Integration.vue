@@ -13,8 +13,7 @@
       }
     },
     filters: {},
-    methods: {
-    },
+    methods: {},
     components: {},
     mounted() {
       let arr = [1, 2, 3, 4, 5, 6];
@@ -87,13 +86,13 @@
       //
       // obj.jian();
 
-     //  函数直接或间接调用自身称之为递归
-     //  function factorial(n) {
-     //    if (n === 1) return 1;
-     //    return n * factorial(n - 1);
-     //  }
-     //
-     // console.log(factorial(5))
+      //  函数直接或间接调用自身称之为递归
+      //  function factorial(n) {
+      //    if (n === 1) return 1;
+      //    return n * factorial(n - 1);
+      //  }
+      //
+      // console.log(factorial(5))
 
       let arrayLike = {
         '1': 'a',
@@ -106,24 +105,25 @@
       // console.log([...arrayLike])
 
 
-      Number.prototype.testNum=function (val) {
+      Number.prototype.testNum = function (val) {
         console.log(val);
         console.log(this)
       };
 
-      let num=0.95;
+      let num = 0.95;
       num.testNum(5)
 
 
-      try{
+      try {
         console.log('success');
-        throw new Error ('error')
-      }catch (e) {
+        throw new Error('error')
+      } catch (e) {
         console.log('1');
         console.log(e)
       }
 
       // console.clear();
+      console.log(Math.E)
     }
   }
 </script>
