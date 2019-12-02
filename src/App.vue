@@ -26,9 +26,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
-    height: 100%;
-    position: relative;
-    /*overflow: auto;*/
+    /*height: 100%;*/
+    position: absolute;
+    top:0;
+    bottom:0;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
 </style>

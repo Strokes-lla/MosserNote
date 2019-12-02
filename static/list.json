@@ -60,5 +60,10 @@
     "name": "highcharts",
     "path": "/highcharts",
     "show": false
+  },
+  {
+    "name": "Canvas",
+    "path": "/Canvas",
+    "show": false
   }
 ]

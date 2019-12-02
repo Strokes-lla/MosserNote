@@ -96,5 +96,12 @@ export default new Router({
       name: 'highcharts',
       component: () => import('@/view/highcharts'),
     },
+
+    //Canvas
+    {
+      path: '/Canvas',
+      name: 'Canvas',
+      component: () => import('@/view/Canvas'),
+    },
   ]
 })
