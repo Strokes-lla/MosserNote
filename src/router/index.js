@@ -99,9 +99,14 @@ export default new Router({
 
     //Canvas
     {
-      path: '/Canvas',
-      name: 'Canvas',
-      component: () => import('@/view/Canvas'),
+      path: '/CanvasBasics',
+      name: 'CanvasBasics',
+      component: () => import('@/view/Canvas/sonPage/CanvasBasics'),
+    },
+    {
+      path: '/CanvasRoute',
+      name: 'CanvasRoute',
+      component: () => import('@/view/Canvas/sonPage/CanvasRoute'),
     },
   ]
 })

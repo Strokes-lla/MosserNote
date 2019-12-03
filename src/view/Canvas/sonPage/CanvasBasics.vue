@@ -1,16 +1,15 @@
 <template>
   <div @click="getCoordinate()" @keyup="reset" class="box_warpper ovhide __absolute bottom0 left0 right0">
-    <canvas id="myCanvas" :width="innerWidth" :height="innerHeight"></canvas>
+    <v-canvas/>
   </div>
 </template>
 
 <script>
+  import canvas from '../canvas'
   export default {
     data() {
       return {
         empty: false,
-        innerHeight: window.innerHeight,
-        innerWidth: window.innerWidth,
         clientX: 0,
         clientY: 0,
       }
@@ -45,8 +44,11 @@
         }
       }
     },
-    components: {},
+    components: {
+      'v-canvas': canvas,
+    },
     mounted() {
+      console.clear()
     }
   }
 </script>
@@ -54,7 +56,6 @@
 <style lang="less" scoped>
   .box_warpper {
     top: 72px;
-
     #myCanvas {
     }
   }
