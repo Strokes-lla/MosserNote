@@ -48,7 +48,6 @@
       'v-canvas': canvas,
     },
     mounted() {
-      console.clear()
     }
   }
 </script>

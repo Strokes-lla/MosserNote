@@ -1,7 +1,9 @@
 <template>
-  <div class="box_warpper">
-    <div v-html="libraryHtml"></div>
-  </div>
+	<div class="box_warpper">
+		<div class="box">
+			<div class="content"></div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -123,12 +125,27 @@
       }
 
       // console.clear();
-      console.log(Math.E)
+      console.log(Math.E);
     }
   }
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-  }
+	.box_warpper {
+		.box {
+			width:500px;
+			height:500px;
+			position: relative;
+			.content {
+				position: absolute;
+				top:50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				/*margin:auto;*/
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		}
+	}
 </style>

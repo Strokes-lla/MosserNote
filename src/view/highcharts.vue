@@ -1,7 +1,7 @@
 <template>
-  <div class="box_warpper">
-    <div id="container"></div>
-  </div>
+	<div class="box_warpper">
+		<div id="container"></div>
+	</div>
 </template>
 
 <script>
@@ -15,70 +15,70 @@
     methods: {
       init() {
         Highcharts.chart('container', {
-          "xAxis": {"min": -0.5, "max": 5.5},
+          "xAxis": {},
           "yAxis": {
-            min:-200,
-            max:200,
+            "min": 43.91,
+            "max": 166.11,
             "plotLines": [{
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": 108.9,
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N+S=108.9", "x": 2},
+              "value": 108.71,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N+S=108.71", "x": 2},
               "zIndex": 3
             }, {
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": -50.69,
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N-S=-50.69", "x": 2},
+              "value": 101.31,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N-S=101.31", "x": 2},
               "zIndex": 3
             }, {
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": 188.7,
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N+2S=188.7", "x": 2},
+              "value": 112.41,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N+2S=112.41", "x": 2},
               "zIndex": 3
             }, {
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": -130.5,
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N-2S=-130.5", "x": 2},
+              "value": 97.61,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N-2S=97.61", "x": 2},
               "zIndex": 3
             }, {
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": 268.5,
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N+3S=268.5", "x": 2},
+              "value": 116.11,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N+3S=116.11", "x": 2},
               "zIndex": 3
             }, {
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": -210.29,
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N-3S=-210.29", "x": 2},
+              "value": 93.91,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N-3S=93.91", "x": 2},
               "zIndex": 3
             }, {
               "color": "black",
               "dashStyle": "dot",
               "width": 2,
-              "value": "29.1",
-              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N=29.1", "x": 2},
+              "value": 105.01,
+              "label": {"align": "right", "style": {"fontStyle": "italic"}, "text": "N=105.01", "x": 2},
               "zIndex": 3
             }]
           },
           "title": {"text": ""},
           "series": [{
-            "type": "line",
+            "type": "spline",
             "name": "",
-            "data": [[1, 1], [2, 2], [3, 3], [4, 6], [5, 9], [6, 4], [7, 8], [8, 2], [9, 5], [10, 2], [11, 4], [12, 8], [13, 52], [14, 5], [15, 8], [16, 30], [17, 5], [18, 54], [19, 5], [20, 6], [21, 2], [22, 4], [23, 55], [24, 2], [25, 5], [26, 85], [27, 25], [28, 25], [29, 5], [30, 445]],
+            "data": [[0, 100], [1, 102], [2, 103], [3, 102], [4, 101], [5, 100], [6, 108], [7, 110], [8, 105], [9, 106], [10, 104], [11, 103], [12, 105], [13, 108], [14, 107], [15, 101], [16, 105], [17, 99], [18, 111], [19, 102], [20, 101], [21, 106], [22, 104], [23, 106], [24, 108], [25, 110], [26, 115], [27, 110], [28, 104], [29, 105]],
             "marker": {"enabled": false},
             "states": {"hover": {"lineWidth": 0}},
             "enableMouseTracking": false
-          }, {"type": "scatter", "name": "", "data": [1, 2, 3, 4, 5, 6], "marker": {"radius": 4}}]
+          }, {"type": "scatter", "name": "", "data": [109, 105, 109, 151], "marker": {"radius": 4}}]
         });
       }
     },
@@ -90,11 +90,11 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-    #container {
-      margin-top: 30px;
-      width: 800px;
-      height: 500px;
-    }
-  }
+	.box_warpper {
+		#container {
+			margin-top: 30px;
+			width: 800px;
+			height: 500px;
+		}
+	}
 </style>

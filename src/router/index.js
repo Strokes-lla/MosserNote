@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   routes: [
     {
@@ -109,4 +109,12 @@ export default new Router({
       component: () => import('@/view/Canvas/sonPage/CanvasRoute'),
     },
   ]
-})
+});
+
+router.beforeEach((to, from, next) => {
+  console.clear();
+  // document.querySelector('title').innerText = to.path;
+  next()
+});
+
+export default router
