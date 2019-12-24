@@ -60,5 +60,20 @@
     "name": "highcharts",
     "path": "/highcharts",
     "show": false
+  },
+  {
+    "name": "Canvas",
+    "path": "/Canvas",
+    "show": true,
+    "sonList": [
+      {
+        "name": "Canvas基础绘制",
+        "path": "/CanvasBasics"
+      },
+      {
+        "name": "Canvas路径",
+        "path": "/CanvasRoute"
+      }
+    ]
   }
 ]

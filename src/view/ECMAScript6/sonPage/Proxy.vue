@@ -20,7 +20,6 @@
       Reflect.deleteProperty(obj, 'name');
       console.log(obj);
 
-
       let proxy = new Proxy(obj, {
         get(target, property) {
           // console.log(property);

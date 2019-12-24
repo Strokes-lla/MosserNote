@@ -28,7 +28,6 @@
     filters: {},
     methods: {
       Jump(path) {
-        console.clear();
         this.$router.push(path)
       }
     },

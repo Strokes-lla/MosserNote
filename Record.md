@@ -70,4 +70,6 @@
 
 ### three.js中文文档
 **http://www.hewebgl.com/article/articledir/1**
+**http://www.yanhuangxueyuan.com/threejs/docs/index.html#manual/zh/introduction/Creating-a-scene**
+
 
