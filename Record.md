@@ -4,7 +4,7 @@
 **https://blog.csdn.net/jiuweihuxiazhi/article/details/78329407**
 
 ### ws破解
-**https://www.jianshu.com/p/4c81cf31b94d**
+**https://www.jianshu.com/p/707c567f89e1**
 
 ### REM配置方法
 **https://blog.csdn.net/a419419/article/details/78415151**
