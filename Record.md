@@ -4,8 +4,6 @@
 **https://blog.csdn.net/jiuweihuxiazhi/article/details/78329407**
 
 ### ws破解
-**https://blog.csdn.net/voke_/article/details/76418116**
-
 **https://www.jianshu.com/p/4c81cf31b94d**
 
 ### REM配置方法
@@ -72,4 +70,5 @@
 **http://www.hewebgl.com/article/articledir/1**
 **http://www.yanhuangxueyuan.com/threejs/docs/index.html#manual/zh/introduction/Creating-a-scene**
 
-
+### 逐行剖析 Vue.js 源码
+**https://nlrx-wjc.github.io/Learn-Vue-Source-Code/start/**

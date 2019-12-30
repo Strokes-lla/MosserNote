@@ -43,6 +43,9 @@
       }
     },
     components: {
+
+
+
       'v-canvas': canvas,
     },
     mounted() {

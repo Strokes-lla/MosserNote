@@ -1,11 +1,12 @@
 <template>
-  <div @click="getCoordinate()" @keyup="reset" class="box_warpper ovhide __absolute bottom0 left0 right0">
-    <v-canvas/>
-  </div>
+	<div @click="getCoordinate()" @keyup="reset" class="box_warpper ovhide __absolute bottom0 left0 right0">
+		<v-canvas/>
+	</div>
 </template>
 
 <script>
   import canvas from '../canvas'
+
   export default {
     data() {
       return {
@@ -53,9 +54,10 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-    top: 72px;
-    #myCanvas {
-    }
-  }
+	.box_warpper {
+		top: 72px;
+
+		#myCanvas {
+		}
+	}
 </style>
