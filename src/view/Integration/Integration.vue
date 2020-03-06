@@ -157,10 +157,41 @@
 
       // console.clear();
       console.log(Math.E);
-      let sss = 6;
-      let arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-      let num1 = 4;
-      console.log(0/0)
+
+
+      Number.prototype.toFixed46 = function (decimalPlaces, Judge = false) {
+        let num = this; //将调用该方法的数字转为字符串
+        let numStr = this + '';
+        if (numStr.includes('.')) {
+          let splitArr = numStr.split(".");
+          let after = splitArr[1].slice(0, 20);
+          if (Judge && [...splitArr[0]][0] > 0) {
+            decimalPlaces = decimalPlaces - splitArr[0].length;
+            decimalPlaces = decimalPlaces >= 0 ? decimalPlaces : 0
+          }
+          if (decimalPlaces > 0) {
+            for (let i = 0; i < after; i++) {
+              if (after[i] == 0) {
+                decimalPlaces++
+              } else {
+                break;
+              }
+            }
+          }
+        }
+        let d = decimalPlaces || 0;
+        let m = Math.pow(10, d);
+        let n = +(d ? num * m : num).toFixed(8); // Avoid rounding errors
+        let i = Math.floor(n), f = n - i;
+        let e = 1e-8; // Allow for rounding errors in f
+        let r = (f > 0.5 - e && f < 0.5 + e) ?
+                ((i % 2 == 0) ? i : i + 1) : Math.round(n);
+        return d ? r / m : r;
+      };
+
+      let number = 314.539;
+      console.log(number.toFixed46());
+
 
     }
   }
