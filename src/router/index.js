@@ -77,13 +77,17 @@ let router = new Router({
       name: 'Generator',
       component: () => import('@/view/ECMAScript6/sonPage/Generator'),
     },
+    {
+      path: '/async',
+      name: 'async',
+      component: () => import('@/view/ECMAScript6/sonPage/async'),
+    },
     //Vue
     {
       path: '/vuex',
       name: 'vuex',
       component: () => import('@/view/Vue/vuex'),
     },
-
     //Integration
     {
       path: '/Integration',
@@ -96,7 +100,6 @@ let router = new Router({
       name: 'highcharts',
       component: () => import('@/view/highcharts'),
     },
-
     //Canvas
     {
       path: '/CanvasBasics',

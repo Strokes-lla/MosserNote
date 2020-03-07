@@ -1,17 +1,25 @@
 <template>
-	<div class="box_warpper">
-		<div class="box">
-			<!--			<div class="content"></div>-->
-			<img @click="getImg()"
-					 src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3179773848,1607805807&fm=26&gp=0.jpg" alt="">
-		</div>
-	</div>
+  <div class="box_warpper">
+    <div class="box">
+      <!--			<div class="content"></div>-->
+      <img @click="getImg()"
+           src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3179773848,1607805807&fm=26&gp=0.jpg" alt="">
+    </div>
+
+    <textarea style="width:500px;height:500px;" v-model="str">
+
+    </textarea>
+    <div style="width:500px;height: 500px;background:red;white-space:pre-line">
+      {{str}}
+    </div>
+  </div>
 </template>
 
 <script>
   export default {
     data() {
       return {
+        str: '',
         libraryHtml: "",
         id: 10,
       }
@@ -156,33 +164,29 @@
       }
 
       // console.clear();
-      console.log(Math.E);
-      let sss = 6;
-      let arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-      let num1 = 4;
-      console.log(0/0)
+
 
     }
   }
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-		.box {
-			width: 500px;
-			height: 500px;
-			position: relative;
+  .box_warpper {
+    .box {
+      width: 500px;
+      height: 500px;
+      position: relative;
 
-			.content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				/*margin:auto;*/
-				width: 100px;
-				height: 100px;
-				background: red;
-			}
-		}
-	}
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*margin:auto;*/
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    }
+  }
 </style>

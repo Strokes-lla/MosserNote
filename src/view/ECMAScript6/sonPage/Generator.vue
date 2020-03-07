@@ -76,8 +76,61 @@
       console.log(ba.next());
       console.log(ba.next());
       console.log(ba.next());
-      console.log(ba.next())
+      console.log(ba.next());
 
+
+      let testFor = (function* () {
+        for (let i = 0; i < 10; i++) {
+          yield i;
+        }
+      }());
+      console.log(testFor.next())
+
+
+      let g = function* () {
+        try {
+          yield 1;
+          yield console.log(2);
+          yield 3;
+        } catch (e) {
+          console.log('内部捕获', e);
+        }
+      };
+
+      let i = g();
+      i.next();
+      try {
+        i.throw('a');
+        i.throw('b');
+        y
+
+      } catch (e) {
+        console.log('外部捕获', e);
+      }
+
+
+      function* gen(x) {
+        try {
+          var y = yield x + 2;
+        } catch (e) {
+          console.log('内部  ' + e);
+        }
+        yield 5;
+        yield 6;
+        return y;
+      }
+
+      let g1 = gen(1);
+      console.log(g1.next());
+      g1.throw('出错了');
+
+      function fs() {
+        console.log(1);
+        return function (num) {
+          console.log(num)
+        }
+      }
+      fs()(2)
     }
   }
 </script>

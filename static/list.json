@@ -43,6 +43,10 @@
       {
         "name": "Generator",
         "path": "Generator"
+      },
+      {
+        "name": "async",
+        "path": "async"
       }
     ]
   },
@@ -59,6 +63,11 @@
   {
     "name": "highcharts",
     "path": "/highcharts",
+    "show": false
+  },
+  {
+    "name": "tesseract",
+    "path": "/tesseract",
     "show": false
   },
   {

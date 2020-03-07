@@ -50,9 +50,10 @@
       });
 
 
-      Promise.resolve(this.test()).then((data) => {
-        console.log(data)
-      })
+      console.log(Promise.resolve(this.test()).then((data) => {
+        // console.log(data)
+        return '123'
+      }))
     }
   }
 </script>
