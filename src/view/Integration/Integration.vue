@@ -164,18 +164,12 @@
         let numStr = this + '';
         if (numStr.includes('.')) {
           let splitArr = numStr.split(".");
-          let after = splitArr[1].slice(0, 20);
-          if (Judge && [...splitArr[0]][0] > 0) {
-            decimalPlaces = decimalPlaces - splitArr[0].length;
-            decimalPlaces = decimalPlaces >= 0 ? decimalPlaces : 0
-          }
-          if (decimalPlaces > 0) {
-            for (let i = 0; i < after; i++) {
-              if (after[i] == 0) {
-                decimalPlaces++
-              } else {
-                break;
-              }
+          if (Judge) {
+            if ([...splitArr[0]][0] > decimalPlaces && splitArr[0].length > decimalPlaces) {
+              decimalPlaces = 0;
+            } else {
+              decimalPlaces = decimalPlaces - splitArr[0].length;
+              decimalPlaces = decimalPlaces >= 0 ? decimalPlaces : 0;
             }
           }
         }
@@ -189,10 +183,8 @@
         return d ? r / m : r;
       };
 
-      let number = 314.539;
-      console.log(number.toFixed46());
-
-
+      let number = 0.0086;
+      console.log(number.toFixed46(4, true));
     }
   }
 </script>

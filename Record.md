@@ -57,6 +57,9 @@
 ### 构造函数
 **https://www.jianshu.com/p/95a5faee17f1**
 
+### 原型对象
+**https://www.jianshu.com/p/dee9f8b14771**
+
 ### pxcook
 **https://www.fancynode.com.cn/pxcook**
 
