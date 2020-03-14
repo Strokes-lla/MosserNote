@@ -19,7 +19,6 @@
   export default {
     data() {
       return {
-        str: '',
         libraryHtml: "",
         id: 10,
       }
@@ -164,8 +163,32 @@
       }
 
       // console.clear();
+      console.log(Math.E);
 
 
+      Number.prototype.toFixed46 = function (decimalPlaces, Judge = false) {
+        let num = this; //将调用该方法的数字转为字符串
+        let numStr = this + '';
+        if (numStr.includes('.')) {
+          let splitArr = numStr.split(".");
+          if (Judge) {
+            if ([...splitArr[0]][0] > decimalPlaces && splitArr[0].length > decimalPlaces) {
+              decimalPlaces = 0;
+            } else {
+              decimalPlaces = decimalPlaces - splitArr[0].length;
+              decimalPlaces = decimalPlaces >= 0 ? decimalPlaces : 0;
+            }
+          }
+        }
+        let d = decimalPlaces || 0;
+        let m = Math.pow(10, d);
+        let n = +(d ? num * m : num).toFixed(8); // Avoid rounding errors
+        let i = Math.floor(n), f = n - i;
+        let e = 1e-8; // Allow for rounding errors in f
+        let r = (f > 0.5 - e && f < 0.5 + e) ?
+                ((i % 2 == 0) ? i : i + 1) : Math.round(n);
+        return d ? r / m : r;
+      };
       class c {
         static cc(n) {
           this.n = n;
@@ -188,6 +211,8 @@
         console.log(arguments)
       }
 
+      let number = 0.0086;
+      console.log(number.toFixed46(4, true));
 
       f({});
 
@@ -197,22 +222,22 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-    .box {
-      width: 500px;
-      height: 500px;
-      position: relative;
+	.box_warpper {
+		.box {
+			width: 500px;
+			height: 500px;
+			position: relative;
 
-      .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /*margin:auto;*/
-        width: 100px;
-        height: 100px;
-        background: red;
-      }
-    }
-  }
+			.content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				/*margin:auto;*/
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		}
+	}
 </style>
