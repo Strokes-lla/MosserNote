@@ -189,6 +189,12 @@
                 ((i % 2 == 0) ? i : i + 1) : Math.round(n);
         return d ? r / m : r;
       };
+
+      let number = 0.0086;
+      console.log(number.toFixed46(4, true));
+
+
+
       class c {
         static cc(n) {
           this.n = n;
@@ -207,12 +213,10 @@
 
 
       function f({n = 'g'}) {
-        console.log(n)
+        console.log(n);
         console.log(arguments)
       }
 
-      let number = 0.0086;
-      console.log(number.toFixed46(4, true));
 
       f({});
 
@@ -222,22 +226,22 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-		.box {
-			width: 500px;
-			height: 500px;
-			position: relative;
+  .box_warpper {
+    .box {
+      width: 500px;
+      height: 500px;
+      position: relative;
 
-			.content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				/*margin:auto;*/
-				width: 100px;
-				height: 100px;
-				background: red;
-			}
-		}
-	}
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*margin:auto;*/
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    }
+  }
 </style>
