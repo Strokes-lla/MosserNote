@@ -702,6 +702,11 @@ input:disabled {
   right: 0;
 }
 
+.Full {
+  top: 0;
+  bottom: 0;
+}
+
 .h100 {
   height: 100%;
 }
@@ -714,4 +719,7 @@ input:disabled {
   display: inline-block;
 }
 
-
+.force {
+  display: inline-block;
+  width: 30px;
+}

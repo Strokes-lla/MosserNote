@@ -111,6 +111,13 @@ let router = new Router({
       name: 'CanvasRoute',
       component: () => import('@/view/Canvas/sonPage/CanvasRoute'),
     },
+
+    //Guitar
+    {
+      path: '/Guitar',
+      name: 'Guitar',
+      component: () => import('@/view/Guitar/Guitar'),
+    },
   ]
 });
 
