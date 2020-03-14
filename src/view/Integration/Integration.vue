@@ -166,6 +166,32 @@
       // console.clear();
 
 
+      class c {
+        static cc(n) {
+          this.n = n;
+        }
+
+        constructor({n = 'g'} = {}) {
+          this.n = n
+        }
+
+      }
+
+      let nc = new c({n: 'p'});
+
+      // console.log(nc.cc('new之前执行'));
+      console.log(c.cc('未new执行'))
+
+
+      function f({n = 'g'}) {
+        console.log(n)
+        console.log(arguments)
+      }
+
+
+      f({});
+
+
     }
   }
 </script>

@@ -1,3 +1,4 @@
+<script src="../../../store/actions.js"></script>
 <template>
   <div class="box_warpper">
 
@@ -36,7 +37,7 @@
         console.log(1)
       }).catch(()=>{
         console.log(2)
-      })
+      });
 
 
       console.log()
