@@ -1,8 +1,7 @@
-<script src="../../../store/actions.js"></script>
 <template>
-  <div class="box_warpper">
+	<div class="box_warpper">
 
-  </div>
+	</div>
 </template>
 
 <script>
@@ -35,7 +34,7 @@
 
       f().then(v => {
         console.log(1)
-      }).catch(()=>{
+      }).catch(() => {
         console.log(2)
       });
 
@@ -46,6 +45,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-  }
+	.box_warpper {
+	}
 </style>
