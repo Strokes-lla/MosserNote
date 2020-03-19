@@ -9,21 +9,6 @@
 ### REM配置方法
 **https://blog.csdn.net/a419419/article/details/78415151**
 
-
-**点涨策略PC 线上：http://www.dzcl98.com/**
-
-**点涨策略PC 测试：http://wwwt.dzcl98.com/**
-
-**点涨期权：http://mmm.diandada.cn/**
-
-**N次方：http://m.ncf8888.com/**
-
-**N次方PC：http://mtt.ncf8888.com/**
-
-**银河点金h5:http://sp.jiachenwang.cn/login**
-
-**951PC：http://wwwtest.keweidaa.cn/**
-
 ### vue移动端口访问设置
 **https://www.jianshu.com/p/93d63e4d679a**
 
