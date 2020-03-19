@@ -14,7 +14,7 @@
     components: {},
     mounted() {
       function timeout(ms) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
           setTimeout(resolve, ms);
         });
       }
@@ -24,7 +24,7 @@
         console.log(value);
       }
 
-      asyncPrint('1000Show', 1000);
+      asyncPrint('hello world', 2000);
 
 
       async function f() {
@@ -38,8 +38,29 @@
         console.log(2)
       });
 
+      function time() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(123);
+          }, 1000)
+        })
+      }
 
-      console.log()
+      async function test() {
+        let str = await time();
+        console.log(str)
+      }
+
+      test();
+
+
+      // new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve(456);
+      //   }, 3000)
+      // }).then((res) => {
+      //   console.log(res)
+      // })
     }
   }
 </script>

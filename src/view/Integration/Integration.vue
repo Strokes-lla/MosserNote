@@ -1,6 +1,6 @@
 <template>
 	<div class="box_warpper">
-		<div class="box">
+		<div tabindex="0" @keyup="cos()" class="box">
 			<!--			<div class="content"></div>-->
 			<img @click="getImg()"
 					 src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3179773848,1607805807&fm=26&gp=0.jpg" alt="">
@@ -9,7 +9,7 @@
 		<textarea style="width:500px;height:500px;" v-model="str">
 
     </textarea>
-		<div style="width:500px;height: 500px;background:red;white-space:pre-line">
+		<div tabindex="1" style="width:500px;height: 500px;background:red;white-space:pre-line">
 			{{str}}
 		</div>
 	</div>
@@ -26,6 +26,9 @@
     },
     filters: {},
     methods: {
+      cos() {
+        console.log(1)
+      },
       getImg() {
         let that = this;
         let image = new Image();
@@ -220,7 +223,13 @@
 
       f({});
 
-
+      let json = [1, 0, 2, 3, 0, 4, 5, 6, 0, 7, 8, 9];
+      json.forEach((item, index) => {
+        if (item === 0) {
+          json.splice(index, 1)
+        }
+      });
+      console.log(json)
     }
   }
 </script>
