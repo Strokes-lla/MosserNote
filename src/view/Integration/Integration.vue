@@ -12,6 +12,9 @@
 		<div tabindex="1" style="width:500px;height: 500px;background:red;white-space:pre-line">
 			{{str}}
 		</div>
+
+
+		<div v-if="show" ref="divShow"></div>
 	</div>
 </template>
 
@@ -19,6 +22,7 @@
   export default {
     data() {
       return {
+        show: false,
         libraryHtml: "",
         id: 10,
         str: ''
@@ -229,7 +233,13 @@
           json.splice(index, 1)
         }
       });
-      console.log(json)
+      console.log(json);
+      setTimeout(() => {
+        this.show = true;
+        this.$nextTick(() => {
+          console.log(this.$refs.divShow)
+        });
+      }, 1000)
     }
   }
 </script>
