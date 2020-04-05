@@ -24,6 +24,7 @@
       // home.getHtml().then((res)=>{
       //   console.log(res)
       // })
+      console.log("test push");
       console.log("Show Time!!!")
     }
   }
