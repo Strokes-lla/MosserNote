@@ -1,6 +1,6 @@
 <template>
-  <div class="box_warpper">
-
+  <div class="box_warpper __absolute">
+    <video src="../assets/img/bg.mp4" autoplay loop muted>您当前的浏览器不支持video</video>
   </div>
 </template>
 
@@ -31,11 +31,25 @@
 
 <style lang="less" scoped>
   .box_warpper {
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
     p {
       width: 300px;
       color: #2C7FF1;
       text-decoration: underline;
       cursor: pointer;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
 </style>
