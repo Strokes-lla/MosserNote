@@ -68,3 +68,6 @@
 
 ### 中国妖怪百集
 **http://www.cbaigui.com/**
+
+
+**SELECT * FROM ROMS_SZ_TASK WHERE id LIKE '%%'**

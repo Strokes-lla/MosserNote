@@ -1,5 +1,7 @@
 <template>
 	<div class="box_warpper">
+		<a style="color:red;" download="报告.html"
+			 href="http://120.77.153.63:8002/upload/docx/RD02190010GW0001/RD02190010GW0001.html?time=2020-03-20%2017:39:35	">下载</a>
 		<div tabindex="0" @keyup="cos()" class="box">
 			<!--			<div class="content"></div>-->
 			<img @click="getImg()"
@@ -12,7 +14,6 @@
 		<div tabindex="1" style="width:500px;height: 500px;background:red;white-space:pre-line">
 			{{str}}
 		</div>
-
 
 		<div v-if="show" ref="divShow"></div>
 	</div>
@@ -174,18 +175,23 @@
       console.log(Math.E);
 
 
-      Number.prototype.toFixed46 = function (decimalPlaces, Judge = false) {
+      Number.prototype.toFixed46 = function (decimalPlaces, Judge = false, revision = false) {
         let num = this; //将调用该方法的数字转为字符串
         let numStr = this + '';
         if (numStr.includes('.')) {
           let splitArr = numStr.split(".");
           if (Judge) {
-            if ([...splitArr[0]][0] > decimalPlaces && splitArr[0].length > decimalPlaces) {
-              decimalPlaces = 0;
+            if ([...splitArr[0]][0] > 0) {
+              if (splitArr[0].length >= decimalPlaces) {
+                decimalPlaces = 0;
+              } else if (splitArr[0].length < decimalPlaces) {
+                decimalPlaces = decimalPlaces - splitArr[0].length;
+              }
             } else {
-              decimalPlaces = decimalPlaces - splitArr[0].length;
-              decimalPlaces = decimalPlaces >= 0 ? decimalPlaces : 0;
+              let index = [...splitArr[1]].findIndex((item, index) => item > 0);
+              decimalPlaces = decimalPlaces + index;
             }
+            decimalPlaces = decimalPlaces >= 0 ? decimalPlaces : 0;
           }
         }
         let d = decimalPlaces || 0;
@@ -195,11 +201,33 @@
         let e = 1e-8; // Allow for rounding errors in f
         let r = (f > 0.5 - e && f < 0.5 + e) ?
                 ((i % 2 == 0) ? i : i + 1) : Math.round(n);
-        return d ? r / m : r;
+        let result = d ? r / m : r;
+
+
+        if (revision) {
+          let surplus = 0;
+          let resultArr = (result + '').split('.');
+          if (resultArr.length > 1 && resultArr[1].length < d) {
+            surplus = d - resultArr[1].length;
+            for (let k = 0; k < surplus; k++) {
+              result = result + '' + 0
+            }
+          } else if (resultArr.length === 1) {
+            surplus = d;
+            let zero = '';
+            if (surplus > 0) {
+              for (let k = 0; k < surplus; k++) {
+                zero += '0'
+              }
+              result = result + '.' + zero;
+            }
+          }
+        }
+        return result;
       };
 
-      let number = 0.0086;
-      console.log(number.toFixed46(4, true));
+      let number = 0.02995;
+      console.log(number.toFixed46(2, true, true));
 
 
       class c {
@@ -227,7 +255,7 @@
 
       f({});
 
-      let json = [1, 0, 2, 3, 0, 4, 5, 6, 0, 7, 8, 9];
+      let json = [1, 0, 0, 0, 0, 0, 2, 3, 0, 4, 5, 6, 0, 7, 8, 9];
       json.forEach((item, index) => {
         if (item === 0) {
           json.splice(index, 1)
