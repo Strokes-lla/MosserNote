@@ -41,6 +41,9 @@
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 
+		/*设置灰度模式*/
+		/*filter: grayscale(100%) !important;*/
+
 		.videoContent {
 			top: 72px;
 			left: 0;
@@ -71,7 +74,7 @@
 				width: 1100px;
 				display: block;
 				margin: 0 auto;
-				background: rgba(242, 245, 248,0.95);
+				background: rgba(242, 245, 248, 0.95);
 				min-height: 1300px;
 			}
 		}
