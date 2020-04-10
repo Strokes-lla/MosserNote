@@ -4,8 +4,8 @@
 		<div class="videoContent __absolute">
 			<video src="@/assets/img/bg.mp4" autoplay loop muted>您当前的浏览器不支持video</video>
 		</div>
-		<div class="Content __absolute">
-			<div class="box __relative">
+		<div class="appContent __absolute">
+			<div class="box __relative" id="content">
 				<router-view/>
 			</div>
 		</div>
@@ -60,7 +60,7 @@
 			}
 		}
 
-		.Content {
+		.appContent {
 			top: 72px;
 			padding: 20px 0;
 			bottom: 0;

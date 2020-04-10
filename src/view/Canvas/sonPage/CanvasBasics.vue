@@ -1,5 +1,5 @@
 <template>
-	<div @click="getCoordinate()" @keyup="reset" class="box_warpper ovhide __absolute bottom0 left0 right0">
+	<div @click="getCoordinate()" @keyup="reset" class="box_warppe">
 		<v-canvas/>
 	</div>
 </template>
@@ -21,9 +21,14 @@
         console.log(e)
       },
       getCoordinate() {
-        console.log(event.clientX);
-        console.log(event.clientY);
-        this.canvas(event.clientX, (event.clientY - 72))
+        let scrollTop = document.getElementsByClassName('appContent')[0].scrollTop;
+        let clientWidth = document.getElementsByClassName('appContent')[0].clientWidth;
+        clientWidth = clientWidth > 1100 ? clientWidth : 1100;
+        let clientX = event.clientX;
+        let clientY = event.clientY;
+        let X = clientX - ((clientWidth - 1100) / 2) - 10;
+        let Y = (clientY - 102) + scrollTop;
+        this.canvas(X, Y)
       },
       canvas(x, y) {
         let c = document.getElementById("myCanvas");
@@ -55,9 +60,5 @@
 
 <style lang="less" scoped>
 	.box_warpper {
-		top: 72px;
-
-		#myCanvas {
-		}
 	}
 </style>

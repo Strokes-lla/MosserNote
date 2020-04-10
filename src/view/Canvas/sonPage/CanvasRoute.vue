@@ -1,7 +1,7 @@
 <template>
-  <div @click="getCoordinate()" class="box_warpper ovhide __absolute bottom0 left0 right0">
-    <v-canvas/>
-  </div>
+	<div @click="getCoordinate()" class="box_warpper">
+		<v-canvas/>
+	</div>
 </template>
 
 <script>
@@ -10,16 +10,21 @@
   export default {
     data() {
       return {
-        innerHeight: window.innerHeight,
-        innerWidth: window.innerWidth,
+        innerHeight: document.getElementById('content').clientHeight - 20,
+        innerWidth: document.getElementById('content').clientWidth - 20,
       }
     },
     filters: {},
     methods: {
       getCoordinate() {
-        console.log(event.clientX);
-        console.log(event.clientY);
-        this.canvas(event.clientX, (event.clientY - 72))
+        let scrollTop = document.getElementsByClassName('appContent')[0].scrollTop;
+        let clientWidth = document.getElementsByClassName('appContent')[0].clientWidth;
+        clientWidth = clientWidth > 1100 ? clientWidth : 1100;
+        let clientX = event.clientX;
+        let clientY = event.clientY;
+        let X = clientX - ((clientWidth - 1100) / 2) - 10;
+        let Y = (clientY - 102) + scrollTop;
+        this.canvas(X, Y)
       },
       canvas(x, y) {
         let c = document.getElementById("myCanvas");
@@ -43,9 +48,6 @@
       }
     },
     components: {
-
-
-
       'v-canvas': canvas,
     },
     mounted() {
@@ -55,7 +57,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-    top: 72px;
-  }
+	.box_warpper {
+	}
 </style>
