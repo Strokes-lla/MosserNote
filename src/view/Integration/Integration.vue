@@ -1,20 +1,5 @@
 <template>
 	<div class="box_warpper">
-		<a style="color:red;" download="报告.html"
-			 href="http://120.77.153.63:8002/upload/docx/RD02190010GW0001/RD02190010GW0001.html?time=2020-03-20%2017:39:35	">下载</a>
-		<div tabindex="0" @keyup="cos()" class="box">
-			<!--			<div class="content"></div>-->
-			<img @click="getImg()"
-					 src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3179773848,1607805807&fm=26&gp=0.jpg" alt="">
-		</div>
-
-		<textarea style="width:500px;height:500px;" v-model="str">
-
-    </textarea>
-		<div tabindex="1" style="width:500px;height: 500px;background:red;white-space:pre-line">
-			{{str}}
-		</div>
-
 		<div v-if="show" ref="divShow"></div>
 	</div>
 </template>
@@ -24,45 +9,10 @@
     data() {
       return {
         show: false,
-        libraryHtml: "",
-        id: 10,
-        str: ''
       }
     },
     filters: {},
-    methods: {
-      cos() {
-        console.log(1)
-      },
-      getImg() {
-        let that = this;
-        let image = new Image();
-        let src = 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3179773848,1607805807&fm=26&gp=0.jpg';
-        image.crossOrigin = '';
-        image.src = src;
-        new Promise((resolve, reject) => {
-          try {
-            image.onload = () => {
-              resolve()
-            }
-          } catch (e) {
-            reject()
-          }
-        }).then((data) => {
-          console.log(that.getBase64Image(image))
-        })
-      },
-      getBase64Image(img) {
-        let canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
-        let ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0, img.width, img.height);
-        let ext = img.src.substring(img.src.lastIndexOf(".") + 1).toLowerCase();
-        let dataUrl = canvas.toDataURL("images/" + ext);
-        return dataUrl;
-      }
-    },
+    methods: {},
     components: {},
     mounted() {
       let arr = [1, 2, 3, 4, 5, 6];
@@ -268,6 +218,9 @@
           console.log(this.$refs.divShow)
         });
       }, 1000)
+
+
+      console.log(this)
     }
   }
 </script>
