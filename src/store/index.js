@@ -22,7 +22,7 @@ const stateA = {
   state: {
     message:'111',
     test: '',
-    token: '',
+    token: '123',
     todos: [
       {id: 1, text: '...', done: true},
       {id: 2, text: '...', done: false}

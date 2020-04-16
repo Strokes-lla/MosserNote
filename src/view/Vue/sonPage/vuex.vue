@@ -1,10 +1,10 @@
 <template>
-  <div class="box_warpper">
-    <p>{{$store.state.stateA.token}}</p>
-    <p @click="puls">{{token}}</p>
-    <p>{{message}}</p>
-    <input type="text" @input="changeNum" v-model="message">
-  </div>
+	<div class="box_warpper">
+		<p>{{$store.state.stateA.token}}</p>
+		<p @click="puls">{{token}}</p>
+		<p>{{message}}</p>
+		<input type="text" @input="changeNum" v-model="message">
+	</div>
 </template>
 
 <script>
@@ -65,7 +65,7 @@
       // this.$store.commit("stateA/saveToken",{type:"saveToken",token:"token"});
       // this['actionsTest']();
       // this.actionsToken(123121113);
-      // console.log(this.token);
+      console.log(this.token);
       // this.$store.dispatch('someAction',123123)
       // this.someAction(123);
       // this.$store.dispatch('actionsToken',123)
@@ -75,6 +75,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-  }
+	.box_warpper {
+	}
 </style>

@@ -84,9 +84,14 @@ let router = new Router({
     },
     //Vue
     {
+      path: '/vue',
+      name: 'vue',
+      component: () => import('@/view/Vue/vue'),
+    },
+    {
       path: '/vuex',
       name: 'vuex',
-      component: () => import('@/view/Vue/vuex'),
+      component: () => import('@/view/Vue/sonPage/vuex'),
     },
     //Integration
     {

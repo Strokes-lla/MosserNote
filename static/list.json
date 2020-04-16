@@ -51,9 +51,15 @@
     ]
   },
   {
-    "name": "vuex",
-    "path": "/vuex",
-    "show": false
+    "name": "vue",
+    "path": "/vue",
+    "show": true,
+    "sonList": [
+      {
+        "name": "vuex",
+        "path": "/vuex"
+      }
+    ]
   },
   {
     "name": "Integration",
