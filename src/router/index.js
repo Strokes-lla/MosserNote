@@ -1,10 +1,12 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-let router = new Router({
-  mode: 'history',
+
+const router = new VueRouter({
+  mode: 'hash',
+  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
@@ -126,8 +128,10 @@ let router = new Router({
   ]
 });
 
+
 router.beforeEach((to, from, next) => {
   console.clear();
+  console.log(process.env.BASE_URL)
   // document.querySelector('title').innerText = to.path;
   next()
 });

@@ -1,12 +1,12 @@
 <template>
-  <div class="box_warpper">
-    <img
-      srcset="../../../assets/img/bg_1.jpg 1920w"
-      sizes="(max-width: 440px) 100vw,
+	<div class="box_warpper">
+		<img
+						srcset="../../../assets/img/bg_1.jpg 1920w"
+						sizes="(max-width: 440px) 100vw,
             (max-width: 900px) 33vw,
             1000px"
-      src="../../../assets/img/bg_1.jpg"/>
-  </div>
+						src="../../../assets/img/bg_1.jpg"/>
+	</div>
 </template>
 
 <script>
@@ -173,6 +173,7 @@
         constructor() {
           this.p = 2;
         }
+
         s() {
           return this.p
         }
@@ -186,6 +187,7 @@
         t() {
           return super.s()
         }
+
         get m() {
           return super.s();
         }
@@ -194,6 +196,7 @@
           return super.prototype
         }
       }
+
       let b = new B();
       // console.log(B.f().s())
       console.log(b.t());
@@ -223,6 +226,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-  }
+	.box_warpper {
+	}
 </style>
