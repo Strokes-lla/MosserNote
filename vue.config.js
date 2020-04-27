@@ -8,7 +8,7 @@ module.exports = {
   productionSourceMap: false,
   devServer: {
     port: 9523,
-    open: true,
+    open: false,
     overlay: {
       warnings: false,
       errors: false
