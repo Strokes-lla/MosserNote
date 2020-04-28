@@ -5,9 +5,10 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: false,
-  productionSourceMap: false,
+  //show Sources
+  productionSourceMap: true,
   devServer: {
-    port: 9523,
+    port: 9521,
     open: false,
     overlay: {
       warnings: false,

@@ -13,6 +13,12 @@
     methods: {},
     components: {},
     mounted() {
+      console.log(this.$route.params);
+      // this.$router.push({path: '/'}, (res) => {
+      //   console.log(res)
+      // }, (res) => {
+      //   console.log(res)
+      // })
     }
   }
 </script>

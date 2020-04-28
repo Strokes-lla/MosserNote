@@ -86,7 +86,7 @@ const router = new VueRouter({
     },
     //Vue
     {
-      path: '/vue',
+      path: '/vue/:id',
       name: 'vue',
       component: () => import('@/view/Vue/vue'),
     },
@@ -125,6 +125,11 @@ const router = new VueRouter({
       name: 'Guitar',
       component: () => import('@/view/Guitar/Guitar'),
     },
+    // {
+    //   path: '*',
+    //   name: '404',
+    //   component: () => import('@/view/ECMAScript6/sonPage/Object'),
+    // }
   ]
 });
 

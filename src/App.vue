@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
 		<v-header></v-header>
+		<v-housekeeper></v-housekeeper>
 		<div class="videoContent __absolute">
 			<video src="@/assets/img/bg.mp4" autoplay loop muted>您当前的浏览器不支持video</video>
 		</div>
@@ -14,13 +15,15 @@
 
 <script>
   import header from "@/components/header"
+  import housekeeper from "@/components/housekeeper.vue"
 
   export default {
     data() {
       return {}
     },
     components: {
-      'v-header': header
+      'v-header': header,
+      'v-housekeeper': housekeeper
     },
     methods: {},
     mounted() {
