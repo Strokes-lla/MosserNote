@@ -1,9 +1,9 @@
 <template>
 	<div ref="housekeeper" class="box_warpper">
 		<div @mousemove="showBubble=true" @mouseout="showBubble=false">
-			<div :class="(showBubble ||longShowBubble) ? 'show':'hide'" class="bubble ovhide transition __relative">
-				<p>{{speak}}</p>
-				<el-input @keydown.enter="analysis" v-if="instructionsInput" v-model="instructionsStr"
+			<div :class="(showBubble || longShowBubble) ? 'show':'hide'" class="bubble ovhide transition __relative">
+				<p v-html="speak"></p>
+				<el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
 									placeholder="Please enter here"
 									type="text" size="small" class="mt10"></el-input>
 			</div>
@@ -34,13 +34,16 @@
         this.reduction();
         setTimeout(() => {
           this.speak = str;
-          this.showBubble = false;
-        }, 200)
+          this.longShowBubble = true;
+        }, 200);
+        setTimeout(() => {
+          this.reduction();
+        }, 5000);
       },
       analysis() {
         let instructionsArr = ['天气'];
         let operation = ['weatherQuery'];
-        let index = instructionsArr.find((item, index) => this.instructionsStr.includes(item))
+        let index = instructionsArr.findIndex((item, index) => this.instructionsStr.includes(item));
         if (index >= 0) {
           this[operation[index]]();
         } else {
@@ -51,7 +54,16 @@
         this.setSpeak('No such service.')
       },
       weatherQuery() {
-        // http://wthrcdn.etouch.cn/weather_mini?city=
+        home.getWeather('杭州').then((res) => {
+          let data = res.data.data;
+          let year = new Date().getFullYear();
+          let str = '先生，今天是' + year + '年' + data.forecast[0].date + ',天气' + data.forecast[0].type + ' 最' + data.forecast[0].high + ' 最' + data.forecast[0].low;
+          str = str + ' ' + data.forecast[0].fengxiang + data.forecast[0].fengli + '<br/>';
+          str = str + ' 当前温度' + data.wendu + '℃ ' + data.ganmao;
+          this.setSpeak(str)
+        }).catch(() => {
+          this.setSpeak('Sorry, query failed.')
+        })
       },
       help() {
         this.speak = 'What can I do for you?';
@@ -59,11 +71,13 @@
         this.instructionsInput = true;
       },
       reduction() {
-        this.speak = 'Hello, sir.';
         this.showBubble = false;
         this.longShowBubble = false;
         this.instructionsInput = false;
-        this.instructionsStr = '';
+        setTimeout(() => {
+          this.speak = 'Hello, sir.';
+          this.instructionsStr = '';
+        }, 200);
       },
     },
     components: {},
@@ -77,9 +91,6 @@
       })
     },
     mounted() {
-      home.getWeather('杭州').then((res) => {
-        console.log(res)
-      })
     }
   }
 </script>

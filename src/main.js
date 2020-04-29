@@ -11,7 +11,6 @@ import {
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 // import './styles.scss'
-
 Vue.use(Input);
 Vue.use(InputNumber);
 Vue.config.productionTip = false;
@@ -23,4 +22,4 @@ new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
