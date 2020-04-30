@@ -1,7 +1,8 @@
 <template>
 	<div ref="housekeeper" class="box_warpper">
 		<div @mousemove="showBubble=true" @mouseout="showBubble=false">
-			<div :class="(showBubble || longShowBubble) ? 'show':'hide'" class="bubble ovhide transition __relative">
+			<div :class="(showBubble || longShowBubble) ? 'show':'hide'"
+					 class="bubble ovhide transition __relative">
 				<p v-html="speak"></p>
 				<el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
 									placeholder="Please enter here"
@@ -158,20 +159,21 @@
 			border-radius: 5px;
 			box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
 			background: white;
-			min-width: 115px;
 			max-width: 300px;
-			min-height: 61px;
 			top: 10px;
 			right: 90px;
 			padding: 20px;
+			overflow: hidden;
 		}
 
 		.show {
 			opacity: 1;
+			visibility: visible;
 		}
 
 		.hide {
 			opacity: 0;
+			visibility: hidden;
 		}
 	}
 </style>
