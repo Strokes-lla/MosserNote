@@ -88,3 +88,7 @@
 
 ### js-cookie
 **https://blog.csdn.net/qq_20802379/article/details/81436634**
+
+
+### panolens.js 一个360度全景照片浏览的 JS 库。
+    

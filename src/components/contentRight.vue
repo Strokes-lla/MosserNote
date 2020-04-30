@@ -3,7 +3,7 @@
 		<div class="boxTop">
 
 		</div>
-		<div class="boxBottom mt20">
+		<div class="boxBottom mt10">
 
 		</div>
 	</div>

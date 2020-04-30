@@ -59,7 +59,7 @@
           let data = res.data.data;
           let year = new Date().getFullYear();
           let month = new Date().getMonth() + 1;
-          let str = '先生，今天是' + year + '年' + month + '月' + data.forecast[0].date + ',天气' + data.forecast[0].type + ' 最' + data.forecast[0].high + ' 最' + data.forecast[0].low;
+          let str = '先生，今天是' + year + '年' + month + '月' + data.forecast[0].date + ',外面的天气' + data.forecast[0].type + ' 最' + data.forecast[0].high + ' 最' + data.forecast[0].low;
           str = str + ' ' + data.forecast[0].fengxiang + data.forecast[0].fengli + '<br/>';
           str = str + ' 当前温度' + data.wendu + '℃ ' + data.ganmao;
           this.setSpeak(str)
