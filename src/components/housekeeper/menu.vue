@@ -1,14 +1,14 @@
 <template>
-	<div ref="content" class="box_content">
-		<div :style="{top:-(index*81)+'px'}" class="__relative box mb20 top0 transition"
-				 v-for="(item,index) in list">
-			<div class="inlineBlock pointer" @click="Jump(item.url)">
-				<img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10"/>
-				<img v-else src="../../assets/img/defico.png" class="inlineBlock mr10"/>
-				<span>{{item.str}}</span>
-			</div>
-		</div>
-	</div>
+  <div ref="content" class="box_content">
+    <div :style="{top:-(index*81)+'px'}" class="__relative box mb20 top0 transition"
+         v-for="(item,index) in list">
+      <div class="inlineBlock pointer" @click="Jump(item.url)">
+        <img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10"/>
+        <img v-else src="../../assets/img/defico.png" class="inlineBlock mr10"/>
+        <span>{{item.str}}</span>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -17,6 +17,10 @@
       return {
         list: [
           {
+            ico: 'https://es6.ruanyifeng.com/favicon.ico',
+            str: 'ECMAScript6 入门',
+            url: 'https://es6.ruanyifeng.com/'
+          }, {
             ico: '',
             str: 'WS 破解',
             url: 'http://lookdiv.com/'
@@ -132,38 +136,38 @@
 </script>
 
 <style lang="less" scoped>
-	.box_content {
-		text-align: right;
-		height: 600px;
-		overflow-y: scroll;
+  .box_content {
+    text-align: right;
+    height: 600px;
+    overflow-y: scroll;
 
-		.transition {
-			transition: all 0.5s;
-			-moz-transition: all 0.5s; /* Firefox 4 */
-			-webkit-transition: all 0.5s; /* Safari 和 Chrome */
-			-o-transition: all 0.5s; /* Opera */
-		}
+    .transition {
+      transition: all 0.5s;
+      -moz-transition: all 0.5s; /* Firefox 4 */
+      -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+      -o-transition: all 0.5s; /* Opera */
+    }
 
-		.box {
-			> div {
-				border-radius: 5px;
-				box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
-				background: white;
-				padding: 20px;
-				overflow: hidden;
-			}
+    .box {
+      > div {
+        border-radius: 5px;
+        box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
+        background: white;
+        padding: 20px;
+        overflow: hidden;
+      }
 
-			> div:hover {
-				span {
-					text-decoration: underline;
-				}
-			}
+      > div:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
 
-			img {
-				vertical-align: middle;
-				width: 17px;
-				height: 17px;
-			}
-		}
-	}
+      img {
+        vertical-align: middle;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
 </style>
