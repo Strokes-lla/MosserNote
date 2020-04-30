@@ -7,7 +7,10 @@
 		</div>
 		<div class="appContent __absolute">
 			<div class="box __relative" id="content">
-				<router-view/>
+				<div class="contentLeft inlineBlock">
+					<router-view/>
+				</div>
+				<v-contentRight></v-contentRight>
 			</div>
 		</div>
 	</div>
@@ -15,7 +18,8 @@
 
 <script>
   import header from "@/components/header"
-  import housekeeper from "@/components/housekeeper.vue"
+  import housekeeper from "@/components/housekeeper/housekeeper.vue"
+  import contentRight from "@/components/contentRight.vue"
 
   export default {
     data() {
@@ -23,7 +27,8 @@
     },
     components: {
       'v-header': header,
-      'v-housekeeper': housekeeper
+      'v-housekeeper': housekeeper,
+      'v-contentRight': contentRight
     },
     methods: {},
     mounted() {
@@ -72,13 +77,17 @@
 			overflow-y: scroll;
 
 			> .box {
-				border-radius: 10px;
-				padding: 10px;
-				width: 1100px;
+				width: 1000px;
 				display: block;
 				margin: 0 auto;
-				background: rgba(242, 245, 248, 0.95);
-				min-height: 1300px;
+
+				> .contentLeft {
+					min-height: 1300px;
+					width: 700px;
+					border-radius: 10px;
+					background: rgba(242, 245, 248, 0.95);
+					padding: 10px;
+				}
 			}
 		}
 	}

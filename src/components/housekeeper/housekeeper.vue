@@ -7,7 +7,7 @@
 									placeholder="Please enter here"
 									type="text" size="small" class="mt10"></el-input>
 			</div>
-			<div @click="help"
+			<div @mouseup.left="help"
 					 class="housekeeper inlineBlock pointer __absolute">
 				<div class="__absolute"></div>
 			</div>
@@ -16,7 +16,8 @@
 </template>
 
 <script>
-  import home from "../../api/home"
+  import home from "../../../api/home"
+  import Cookie from 'js-cookie'
 
   export default {
     data() {
@@ -38,7 +39,7 @@
         }, 200);
         setTimeout(() => {
           this.reduction();
-        }, 5000);
+        }, 7000);
       },
       analysis() {
         let instructionsArr = ['天气'];
@@ -57,7 +58,8 @@
         home.getWeather('杭州').then((res) => {
           let data = res.data.data;
           let year = new Date().getFullYear();
-          let str = '先生，今天是' + year + '年' + data.forecast[0].date + ',天气' + data.forecast[0].type + ' 最' + data.forecast[0].high + ' 最' + data.forecast[0].low;
+          let month = new Date().getMonth() + 1;
+          let str = '先生，今天是' + year + '年' + month + '月' + data.forecast[0].date + ',天气' + data.forecast[0].type + ' 最' + data.forecast[0].high + ' 最' + data.forecast[0].low;
           str = str + ' ' + data.forecast[0].fengxiang + data.forecast[0].fengli + '<br/>';
           str = str + ' 当前温度' + data.wendu + '℃ ' + data.ganmao;
           this.setSpeak(str)
@@ -73,11 +75,19 @@
       reduction() {
         this.showBubble = false;
         this.longShowBubble = false;
-        this.instructionsInput = false;
         setTimeout(() => {
           this.speak = 'Hello, sir.';
+          this.instructionsInput = false;
           this.instructionsStr = '';
         }, 200);
+      },
+      init() {
+        if (Cookie.get('Welcome') !== 'hide') {
+          let time = new Date().getTime();
+          let date = new Date(time + (1000 * 60 * 60 * 5));
+          this.setSpeak('Welcome back, sir.');
+          Cookie.set('Welcome', 'hide', {expires: date});
+        }
       },
     },
     components: {},
@@ -91,6 +101,7 @@
       })
     },
     mounted() {
+      this.init();
     }
   }
 </script>
