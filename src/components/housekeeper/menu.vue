@@ -101,9 +101,9 @@
             str: '中国妖怪百集',
             url: 'http://www.cbaigui.com/'
           }, {
-            ico: "http://www.cbaigui.com/wp-content/uploads/2020/04/cropped-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200216143649-32x32.jpg",
-            str: '中国妖怪百集',
-            url: 'http://www.cbaigui.com/'
+            ico: "https://www.ear0.com/public/images/favicon.ico",
+            str: '耳聆网',
+            url: 'https://www.ear0.com/'
           }, {
             ico: "https://csdnimg.cn/public/favicon.ico",
             str: 'js-cookie',
