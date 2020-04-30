@@ -1,7 +1,8 @@
 <template>
 	<div ref="housekeeper" class="box_warpper">
+		<v-menu v-if="menu" class="__relative menu"></v-menu>
 		<div @mousemove="showBubble=true" @mouseout="showBubble=false">
-			<div :class="(showBubble || longShowBubble) ? 'show':'hide'"
+			<div :class="(showBubble || longShowBubble)&&!menu ? 'show':'hide'"
 					 class="bubble ovhide transition __relative">
 				<p v-html="speak"></p>
 				<el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
@@ -18,16 +19,20 @@
 
 <script>
   import home from "../../../api/home"
+  import menu from "@/components/housekeeper/menu.vue"
   import Cookie from 'js-cookie'
 
   export default {
     data() {
       return {
+        isOccupy: true,
+
         speak: 'Hello, sir.',
         showBubble: false,
         longShowBubble: false,
         instructionsInput: false,
         instructionsStr: '',
+        menu: false,
       }
     },
     filters: {},
@@ -43,8 +48,8 @@
         }, 7000);
       },
       analysis() {
-        let instructionsArr = ['天气'];
-        let operation = ['weatherQuery'];
+        let instructionsArr = ['天气', '收藏'];
+        let operation = ['weatherQuery', 'menuShow'];
         let index = instructionsArr.findIndex((item, index) => this.instructionsStr.includes(item));
         if (index >= 0) {
           this[operation[index]]();
@@ -54,6 +59,11 @@
       },
       notFound() {
         this.setSpeak('No such service.')
+      },
+      menuShow() {
+        this.reduction();
+        this.menu = true;
+        this.isOccupy = false;
       },
       weatherQuery() {
         home.getWeather('杭州').then((res) => {
@@ -69,11 +79,15 @@
         })
       },
       help() {
-        this.speak = 'What can I do for you?';
-        this.longShowBubble = true;
-        this.instructionsInput = true;
+        if (this.isOccupy) {
+          this.speak = 'What can I do for you?';
+          this.longShowBubble = true;
+          this.instructionsInput = true;
+        }
       },
       reduction() {
+        this.isOccupy = true;
+        this.menu = false;
         this.showBubble = false;
         this.longShowBubble = false;
         setTimeout(() => {
@@ -91,13 +105,15 @@
         }
       },
     },
-    components: {},
+    components: {
+      'v-menu': menu
+    },
     created() {
       document.addEventListener('click', (e) => {
         if (!this.$refs.housekeeper.contains(e.target)) {
           setTimeout(() => {
             this.reduction()
-          }, 500)
+          }, 300)
         }
       })
     },
@@ -113,6 +129,11 @@
 		position: fixed;
 		right: 30px;
 		top: 100px;
+
+		.menu {
+			top: 10px;
+			right: 90px;
+		}
 
 		.housekeeper {
 			width: 70px;
