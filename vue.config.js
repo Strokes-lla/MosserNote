@@ -23,6 +23,8 @@ module.exports = {
       }
     }
   },
+  chainWebpack(config) {
+  },
   pwa: {
     manifestOptions: {
       icons: [],
