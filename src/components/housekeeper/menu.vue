@@ -21,7 +21,7 @@
             str: 'ECMAScript6 入门',
             url: 'https://es6.ruanyifeng.com/'
           }, {
-            ico: 'https://assets.segmentfault.com/v-5eaa9db5/global/img/favicon.ico',
+            ico: 'https://assets.segmentfault.com/v-5eaa9db5/global/img/static/touch-icon.png',
             str: '给自己的网站添加网易云音乐歌单',
             url: 'https://segmentfault.com/a/1190000016786093'
           }, {
