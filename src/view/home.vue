@@ -23,6 +23,7 @@
       // home.getHtml().then((res)=>{
       //   console.log(res)
       // })
+      console.log(process.env.VUE_APP_STR)
     }
   }
 </script>

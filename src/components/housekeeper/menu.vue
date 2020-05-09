@@ -3,8 +3,8 @@
 		<div :style="{top:-(index*81)+'px'}" class="__relative box mb20 top0 transition"
 				 v-for="(item,index) in list">
 			<div class="inlineBlock pointer" @click="Jump(item.url)">
-				<img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10"/>
-				<img v-else src="../../assets/img/defico.png" class="inlineBlock mr10"/>
+				<img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10 __relative" style="top:-1px;"/>
+				<img v-else src="../../assets/img/defico.png" class="inlineBlock mr10 __relative" style="top:-1px;"/>
 				<span>{{item.str}}</span>
 			</div>
 		</div>
