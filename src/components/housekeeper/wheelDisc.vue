@@ -21,8 +21,8 @@
         }, {
           ico: 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png',
           url: 'https://fanyi.baidu.com/?aldtype=16047#auto/zh',
-          top: 15,
-          left: 15,
+          top: 10,
+          left: 20,
         }, {
           ico: 'https://weibo.com/favicon.ico',
           url: 'https://weibo.com/fenyu95/home?wvr=5',
@@ -31,8 +31,8 @@
         }, {
           ico: 'https://static.zhihu.com/static/favicon.ico',
           url: 'https://www.zhihu.com/hot',
-          top: 155,
-          left: 15,
+          top: 150,
+          left: 20,
         }, {
           ico: 'https://tb1.bdstatic.com/tb/favicon.ico',
           url: 'https://tieba.baidu.com/index.html',
