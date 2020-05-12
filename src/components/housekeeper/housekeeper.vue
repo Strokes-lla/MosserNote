@@ -1,15 +1,17 @@
 <template>
 	<div ref="housekeeper" class="box_warpper">
 		<v-menu v-if="menu" class="__relative menu"></v-menu>
+		<v-wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></v-wheelDisc>
 		<div @mousemove="showBubble=true" @mouseout="showBubble=false">
-			<div :class="(showBubble || longShowBubble)&&!menu ? 'show':'hide'"
-					 class="bubble ovhide transition __relative">
+			<div :class="setClassBubble()"
+					 class="bubble ovhide __relative">
 				<p v-html="speak"></p>
 				<el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
 									placeholder="Please enter here"
 									type="text" size="small" class="mt10"></el-input>
 			</div>
 			<div @mouseup.left="help"
+					 @dblclick="awakenWheelDisc"
 					 class="housekeeper inlineBlock pointer __absolute">
 				<div class="__absolute"></div>
 			</div>
@@ -20,6 +22,7 @@
 <script>
   import home from "../../../api/home"
   import menu from "@/components/housekeeper/menu.vue"
+  import wheelDisc from "@/components/housekeeper/wheelDisc.vue"
   import Cookie from 'js-cookie'
 
   export default {
@@ -33,10 +36,21 @@
         instructionsInput: false,
         instructionsStr: '',
         menu: false,
+        wheelDisc: false,
       }
     },
     filters: {},
     methods: {
+      setClassBubble() {
+        let classStr = '';
+        classStr = (this.showBubble || this.longShowBubble) && this.isOccupy ? 'show' : 'hide';
+        classStr = !this.wheelDisc ? classStr + ' transition' : classStr;
+        return classStr
+      },
+      awakenWheelDisc() {
+        this.isOccupy = false;
+        this.wheelDisc = true;
+      },
       setSpeak(str) {
         this.reduction();
         setTimeout(() => {
@@ -88,6 +102,7 @@
       reduction() {
         this.isOccupy = true;
         this.menu = false;
+        this.wheelDisc = false;
         this.showBubble = false;
         this.longShowBubble = false;
         setTimeout(() => {
@@ -106,7 +121,8 @@
       },
     },
     components: {
-      'v-menu': menu
+      'v-menu': menu,
+      'v-wheelDisc': wheelDisc
     },
     created() {
       document.addEventListener('click', (e) => {
@@ -133,6 +149,11 @@
 		.menu {
 			top: 10px;
 			right: 90px;
+		}
+
+		.wheelDisc {
+			top: -65px;
+			left: 80px;
 		}
 
 		.housekeeper {
