@@ -17,6 +17,10 @@
       return {
         list: [
           {
+            ico: 'https://www.avatardata.cn/favicon.ico',
+            str: '阿凡达数据',
+            url: 'https://www.avatardata.cn/'
+          }, {
             ico: 'https://es6.ruanyifeng.com/favicon.ico',
             str: 'ECMAScript6 入门',
             url: 'https://es6.ruanyifeng.com/'
