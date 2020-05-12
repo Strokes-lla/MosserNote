@@ -10,7 +10,7 @@
 									placeholder="Please enter here"
 									type="text" size="small" class="mt10"></el-input>
 			</div>
-			<div @mouseup.left="help"
+			<div @click="help"
 					 @dblclick="awakenWheelDisc"
 					 class="housekeeper inlineBlock pointer __absolute">
 				<div class="__absolute"></div>
