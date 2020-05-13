@@ -106,13 +106,29 @@
             url: 'https://nlrx-wjc.github.io/Learn-Vue-Source-Code/start/'
           }, {
             ico: "",
-            str: '显示所有在天上的飞机的位置',
+            str: '下雨天的声音',
             url: 'https://www.rainymood.com/'
           }, {
             ico: "http://www.cbaigui.com/wp-content/uploads/2020/04/cropped-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200216143649-32x32.jpg",
             str: '中国妖怪百集',
             url: 'http://www.cbaigui.com/'
           }, {
+            ico: "https://www.allhistory.com/favicon.ico",
+            str: '全历史',
+            url: 'https://www.allhistory.com/'
+          }, {
+            ico: "https://www.remove.bg/favicon.ico?v=YAXaAv7pao",
+            str: '一个抠图网站',
+            url: 'https://www.remove.bg/zh'
+          }, {
+            ico: "https://www.airpano.ru/favicon.ico",
+            str: '全球风景360°',
+            url: 'https://www.airpano.com/'
+          },  {
+            ico: "https://www.yikm.net/logo.png",
+            str: '小霸王，其乐无穷',
+            url: 'https://www.yikm.net/'
+          },  {
             ico: "https://www.ear0.com/public/images/favicon.ico",
             str: '耳聆网',
             url: 'https://www.ear0.com/'
