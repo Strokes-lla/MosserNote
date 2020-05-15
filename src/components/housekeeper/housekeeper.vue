@@ -48,8 +48,10 @@
         return classStr
       },
       awakenWheelDisc() {
-        this.isOccupy = false;
-        this.wheelDisc = true;
+        if (this.isOccupy) {
+          this.isOccupy = false;
+          this.wheelDisc = true;
+        }
       },
       setSpeak(str) {
         this.reduction();
@@ -66,6 +68,7 @@
         let operation = ['weatherQuery', 'menuShow'];
         let index = instructionsArr.findIndex((item, index) => this.instructionsStr.includes(item));
         if (index >= 0) {
+          this.isOccupy = false;
           this[operation[index]]();
         } else {
           this.notFound();

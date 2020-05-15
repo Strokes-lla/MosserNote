@@ -1,6 +1,6 @@
 <template>
-  <div class="box_warpper">
-  </div>
+	<div class="box_warpper">
+	</div>
 </template>
 
 <script>
@@ -17,12 +17,13 @@
         sex: "n",
         // age:18,
       };
-      Reflect.deleteProperty(obj, 'name');
-      console.log(obj);
+      // Reflect.deleteProperty(obj, 'name');
+      // console.log(obj);
 
       let proxy = new Proxy(obj, {
         get(target, property) {
-          // console.log(property);
+          console.log(property);
+          console.log(target);
           if (property == 'age') {
             return 35;
           } else {
@@ -30,7 +31,7 @@
           }
         },
       });
-      // console.log(proxy.name);
+      console.log(proxy.name);
       // console.log(proxy.age);
 
 
@@ -39,6 +40,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-  }
+	.box_warpper {
+	}
 </style>
