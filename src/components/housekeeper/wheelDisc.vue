@@ -19,7 +19,7 @@
           top: -15,
           left: 85,
         }, {
-          ico: 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon-32x32_ca689c3.png',
+          ico: 'https://fanyi-cdn.cdn.bcebos.com/static/translation/img/favicon/favicon_d87cd2a.ico',
           url: 'https://fanyi.baidu.com/?aldtype=16047#auto/zh',
           top: 10,
           left: 20,
@@ -29,7 +29,7 @@
           top: 85,
           left: -15,
         }, {
-          ico: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-152.67c7b278.png',
+          ico: 'https://static.zhihu.com/static/favicon.ico',
           url: 'https://www.zhihu.com/hot',
           top: 150,
           left: 20,
