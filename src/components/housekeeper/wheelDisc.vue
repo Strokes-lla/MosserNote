@@ -29,7 +29,7 @@
           top: 85,
           left: -15,
         }, {
-          ico: 'https://static.zhihu.com/static/favicon.ico',
+          ico: 'https://static.zhihu.com/heifetz/assets/apple-touch-icon-152.67c7b278.png',
           url: 'https://www.zhihu.com/hot',
           top: 150,
           left: 20,
