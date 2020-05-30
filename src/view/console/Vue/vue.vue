@@ -1,16 +1,21 @@
 <template>
-	<div class="box_warpper">
-
-	</div>
+  <div @[event]="cos()" class="box_warpper">
+  </div>
 </template>
 
 <script>
   export default {
     data() {
-      return {}
+      return {
+				event:'click'
+			}
     },
     filters: {},
-    methods: {},
+    methods: {
+    	cos(){
+    		console.log(1)
+			}
+		},
     components: {},
     mounted() {
       console.log(this.$route.params);
@@ -24,6 +29,6 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-	}
+  .box_warpper {
+  }
 </style>

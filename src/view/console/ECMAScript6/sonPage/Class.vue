@@ -1,11 +1,11 @@
 <template>
 	<div class="box_warpper">
 		<img
-						srcset="../../../assets/img/bg_1.jpg 1920w"
+						srcset="../../../../assets/img/bg_1.jpg 1920w"
 						sizes="(max-width: 440px) 100vw,
             (max-width: 900px) 33vw,
             1000px"
-						src="../../../assets/img/bg_1.jpg"/>
+						src="../../../../assets/img/bg_1.jpg"/>
 	</div>
 </template>
 

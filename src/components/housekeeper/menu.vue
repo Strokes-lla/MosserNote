@@ -1,14 +1,14 @@
 <template>
-	<div ref="content" class="box_content">
-		<div :style="{top:-(index*81)+'px'}" class="__relative box mb20 top0 transition"
-				 v-for="(item,index) in list">
-			<div class="inlineBlock pointer" @click="Jump(item.url)">
-				<img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10 __relative" style="top:-1px;"/>
-				<img v-else src="../../assets/img/defico.png" class="inlineBlock mr10 __relative" style="top:-1px;"/>
-				<span>{{item.str}}</span>
-			</div>
-		</div>
-	</div>
+  <div ref="content" class="box_content">
+    <div :style="{top:-(index*81)+'px'}" class="__relative box mb20 top0 transition5"
+         v-for="(item,index) in list">
+      <div class="inlineBlock pointer" @click="Jump(item.url)">
+        <img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10 __relative" style="top:-1px;"/>
+        <img v-else src="../../assets/img/defico.png" class="inlineBlock mr10 __relative" style="top:-1px;"/>
+        <span>{{item.str}}</span>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -124,11 +124,11 @@
             ico: "https://www.airpano.ru/favicon.ico",
             str: '全球风景360°',
             url: 'https://www.airpano.com/'
-          },  {
+          }, {
             ico: "https://www.yikm.net/logo.png",
             str: '小霸王，其乐无穷',
             url: 'https://www.yikm.net/'
-          },  {
+          }, {
             ico: "https://www.ear0.com/public/images/favicon.ico",
             str: '耳聆网',
             url: 'https://www.ear0.com/'
@@ -160,38 +160,31 @@
 </script>
 
 <style lang="less" scoped>
-	.box_content {
-		text-align: right;
-		height: 600px;
-		overflow-y: scroll;
+  .box_content {
+    text-align: right;
+    height: 600px;
+    overflow-y: scroll;
 
-		.transition {
-			transition: all 0.5s;
-			-moz-transition: all 0.5s; /* Firefox 4 */
-			-webkit-transition: all 0.5s; /* Safari 和 Chrome */
-			-o-transition: all 0.5s; /* Opera */
-		}
+    .box {
+      > div {
+        border-radius: 5px;
+        box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
+        background: white;
+        padding: 20px;
+        overflow: hidden;
+      }
 
-		.box {
-			> div {
-				border-radius: 5px;
-				box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
-				background: white;
-				padding: 20px;
-				overflow: hidden;
-			}
+      > div:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
 
-			> div:hover {
-				span {
-					text-decoration: underline;
-				}
-			}
-
-			img {
-				vertical-align: middle;
-				width: 17px;
-				height: 17px;
-			}
-		}
-	}
+      img {
+        vertical-align: middle;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
 </style>

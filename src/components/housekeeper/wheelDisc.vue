@@ -1,12 +1,12 @@
 <template>
-	<div class="box_wheelDisc">
-		<div :class="!Judge ? 'rotate':''" class="wheelDiscBox transition">
-			<div v-for="(item,index) in list" class="__absolute pointer" @click="Jump(item.url)"
-					 :style="{top:item.top+'px',left:item.left+'px'}">
-				<div :style="{background:'url('+item.ico+')',backgroundSize:'100% 100%'}"></div>
-			</div>
-		</div>
-	</div>
+  <div class="box_wheelDisc">
+    <div :class="!Judge ? 'rotate':''" class="wheelDiscBox transition4">
+      <div v-for="(item,index) in list" class="__absolute pointer" @click="Jump(item.url)"
+           :style="{top:item.top+'px',left:item.left+'px'}">
+        <div :style="{background:'url('+item.ico+')',backgroundSize:'100% 100%'}"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -58,41 +58,34 @@
 </script>
 
 <style lang="less" scoped>
-	.box_wheelDisc {
-		.wheelDiscBox {
-			width: 200px;
-			height: 200px;
-			/*background: red;*/
-			border-radius: 50%;
-			transform: rotate(-20deg);
+  .box_wheelDisc {
+    .wheelDiscBox {
+      width: 200px;
+      height: 200px;
+      /*background: red;*/
+      border-radius: 50%;
+      transform: rotate(-20deg);
 
-			> .__absolute {
-				width: 30px;
-				height: 30px;
-				overflow: hidden;
-				border-radius: 50%;
-				background: white;
-				opacity: 0.9;
-				box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
-				div {
-					width: 30px;
-					height: 30px;
-					border-radius: 50%;
-				}
-			}
-		}
+      > .__absolute {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        background: white;
+        opacity: 0.9;
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
 
-		.rotate {
-			transform: rotate(-120deg);
-			opacity: 0;
-		}
+        div {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+      }
+    }
 
-		.transition {
-			transition: all 0.4s;
-			-moz-transition: all 0.4s; /* Firefox 4 */
-			-webkit-transition: all 0.4s; /* Safari 和 Chrome */
-			-o-transition: all 0.4s; /* Opera */
-		}
-
-	}
+    .rotate {
+      transform: rotate(-120deg);
+      opacity: 0;
+    }
+  }
 </style>

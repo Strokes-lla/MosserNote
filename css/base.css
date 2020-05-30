@@ -723,3 +723,32 @@ input:disabled {
   display: inline-block;
   width: 30px;
 }
+
+
+.transition2 {
+  transition: all 0.2s;
+  -moz-transition: all 0.2s; /* Firefox 4 */
+  -webkit-transition: all 0.2s; /* Safari 和 Chrome */
+  -o-transition: all 0.2s; /* Opera */
+}
+
+.transition3 {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s; /* Firefox 4 */
+  -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+  -o-transition: all 0.5s; /* Opera */
+}
+
+.transition4 {
+  transition: all 0.4s;
+  -moz-transition: all 0.4s; /* Firefox 4 */
+  -webkit-transition: all 0.4s; /* Safari 和 Chrome */
+  -o-transition: all 0.4s; /* Opera */
+}
+
+.transition5 {
+  transition: all 0.5s;
+  -moz-transition: all 0.5s; /* Firefox 4 */
+  -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+  -o-transition: all 0.5s; /* Opera */
+}

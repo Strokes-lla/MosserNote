@@ -1,7 +1,6 @@
 <template>
-	<div class="box_warpper">
-
-	</div>
+  <div class="box_warpper">
+  </div>
 </template>
 
 <script>
@@ -66,6 +65,6 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-	}
+  .box_warpper {
+  }
 </style>

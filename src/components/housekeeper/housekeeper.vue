@@ -44,7 +44,7 @@
       setClassBubble() {
         let classStr = '';
         classStr = (this.showBubble || this.longShowBubble) && this.isOccupy ? 'show' : 'hide';
-        classStr = !this.wheelDisc ? classStr + ' transition' : classStr;
+        classStr = !this.wheelDisc ? classStr + ' transition2' : classStr;
         return classStr
       },
       awakenWheelDisc() {
@@ -190,13 +190,6 @@
 			0% {
 				transform: scale(0.6, 0.6);
 			}
-		}
-
-		.transition {
-			transition: all 0.2s;
-			-moz-transition: all 0.2s; /* Firefox 4 */
-			-webkit-transition: all 0.2s; /* Safari 和 Chrome */
-			-o-transition: all 0.2s; /* Opera */
 		}
 
 		.bubble {

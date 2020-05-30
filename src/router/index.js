@@ -13,112 +13,117 @@ const router = new VueRouter({
       name: 'home',
       component: () => import('@/view/home'),
     },
-
-    //ECMAScript6
     {
-      path: '/Object',
-      name: 'Object',
-      component: () => import('@/view/ECMAScript6/sonPage/Object'),
+      path: '/console',
+      name: 'console',
+      component: () => import('@/view/console/console'),
+      children: [
+        //ECMAScript6
+        {
+          path: '/console/Object',
+          name: 'Object',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Object'),
+        },
+        {
+          path: '/console/ObjectFunction',
+          name: 'ObjectFunction',
+          component: () => import('@/view/console/ECMAScript6/sonPage/ObjectFunction'),
+        },
+        {
+          path: '/console/Symbol',
+          name: 'Symbol',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Symbol'),
+        },
+        {
+          path: '/console/Promise',
+          name: 'Promise',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Promise'),
+        },
+        {
+          path: '/console/Class',
+          name: 'Class',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Class'),
+        },
+        {
+          path: '/console/personal',
+          name: 'personal',
+          component: () => import('@/view/console/ECMAScript6/sonPage/personal'),
+        },
+        {
+          path: '/console/Set',
+          name: 'Set',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Set'),
+        },
+        {
+          path: '/console/Proxy',
+          name: 'Proxy',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Proxy'),
+        },
+        {
+          path: '/console/Reflect',
+          name: 'Reflect',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Reflect'),
+        },
+        {
+          path: '/console/Iterator',
+          name: 'Iterator',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Iterator'),
+        },
+        {
+          path: '/console/Generator',
+          name: 'Generator',
+          component: () => import('@/view/console/ECMAScript6/sonPage/Generator'),
+        },
+        {
+          path: '/console/async',
+          name: 'async',
+          component: () => import('@/view/console/ECMAScript6/sonPage/async'),
+        },
+        //Vue
+        {
+          path: '/console/vue/:id',
+          name: 'vue',
+          component: () => import('@/view/console/Vue/vue'),
+        },
+        {
+          path: '/console/vuex',
+          name: 'vuex',
+          component: () => import('@/view/console/Vue/sonPage/vuex'),
+        },
+        //Integration
+        {
+          path: '/console/Integration',
+          name: 'Integration',
+          component: () => import('@/view/console/Integration/Integration'),
+        },
+        //heightcharts
+        {
+          path: '/console/highcharts',
+          name: 'highcharts',
+          component: () => import('@/view/console/highcharts'),
+        },
+        //Canvas
+        {
+          path: '/console/CanvasBasics',
+          name: 'CanvasBasics',
+          component: () => import('@/view/console/Canvas/sonPage/CanvasBasics'),
+        },
+        {
+          path: '/console/CanvasRoute',
+          name: 'CanvasRoute',
+          component: () => import('@/view/console/Canvas/sonPage/CanvasRoute'),
+        }],
     },
     {
-      path: '/ObjectFunction',
-      name: 'ObjectFunction',
-      component: () => import('@/view/ECMAScript6/sonPage/ObjectFunction'),
-      // children: [{
-      //   path: '/ObjectFunction/Object',
-      //   name: 'Object',
-      //   component: () => import('@/view/ECMAScript6/sonPage/Object'),
-      // },{
-      //   path: '/ObjectFunction/Symbol',
-      //   name: 'Symbol',
-      //   component: () => import('@/view/ECMAScript6/sonPage/Symbol'),
-      // }]
+      path: '/experience',
+      name: 'experience',
+      component: () => import('@/view/experience/experience'),
     },
     {
-      path: '/Symbol',
-      name: 'Symbol',
-      component: () => import('@/view/ECMAScript6/sonPage/Symbol'),
+      path: '/function',
+      name: 'function',
+      component: () => import('@/view/function/function'),
     },
-    {
-      path: '/Promise',
-      name: 'Promise',
-      component: () => import('@/view/ECMAScript6/sonPage/Promise'),
-    },
-    {
-      path: '/Class',
-      name: 'Class',
-      component: () => import('@/view/ECMAScript6/sonPage/Class'),
-    },
-    {
-      path: '/personal',
-      name: 'personal',
-      component: () => import('@/view/ECMAScript6/sonPage/personal'),
-    },
-    {
-      path: '/Set',
-      name: 'Set',
-      component: () => import('@/view/ECMAScript6/sonPage/Set'),
-    },
-    {
-      path: '/Proxy',
-      name: 'Proxy',
-      component: () => import('@/view/ECMAScript6/sonPage/Proxy'),
-    },
-    {
-      path: '/Reflect',
-      name: 'Reflect',
-      component: () => import('@/view/ECMAScript6/sonPage/Reflect'),
-    },
-    {
-      path: '/Iterator',
-      name: 'Iterator',
-      component: () => import('@/view/ECMAScript6/sonPage/Iterator'),
-    },
-    {
-      path: '/Generator',
-      name: 'Generator',
-      component: () => import('@/view/ECMAScript6/sonPage/Generator'),
-    },
-    {
-      path: '/async',
-      name: 'async',
-      component: () => import('@/view/ECMAScript6/sonPage/async'),
-    },
-    //Vue
-    {
-      path: '/vue/:id',
-      name: 'vue',
-      component: () => import('@/view/Vue/vue'),
-    },
-    {
-      path: '/vuex',
-      name: 'vuex',
-      component: () => import('@/view/Vue/sonPage/vuex'),
-    },
-    //Integration
-    {
-      path: '/Integration',
-      name: 'Integration',
-      component: () => import('@/view/Integration/Integration'),
-    },
-    //heightcharts
-    {
-      path: '/highcharts',
-      name: 'highcharts',
-      component: () => import('@/view/highcharts'),
-    },
-    //Canvas
-    {
-      path: '/CanvasBasics',
-      name: 'CanvasBasics',
-      component: () => import('@/view/Canvas/sonPage/CanvasBasics'),
-    },
-    {
-      path: '/CanvasRoute',
-      name: 'CanvasRoute',
-      component: () => import('@/view/Canvas/sonPage/CanvasRoute'),
-    },
-
     //Guitar
     {
       path: '/Guitar',
@@ -136,7 +141,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   console.clear();
-  console.log(process.env.BASE_URL)
+  console.log(process.env.BASE_URL);
   // document.querySelector('title').innerText = to.path;
   next()
 });

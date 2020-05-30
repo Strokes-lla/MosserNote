@@ -1,5 +1,6 @@
 <template>
 	<div class="box_warpper">
+
 	</div>
 </template>
 
@@ -30,11 +31,13 @@
 
 <style lang="less" scoped>
 	.box_warpper {
-		p {
-			width: 300px;
-			color: #2C7FF1;
-			text-decoration: underline;
-			cursor: pointer;
-		}
+		width: 1000px;
+		display: block;
+		margin: 0 auto;
+
+		min-height: 1300px;
+		border-radius: 10px;
+		background: rgba(242, 245, 248, 0.95);
+		padding: 10px;
 	}
 </style>
