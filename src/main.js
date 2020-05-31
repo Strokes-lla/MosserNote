@@ -8,11 +8,15 @@ import '../css/base.css'
 import {
   Input,
   InputNumber,
+  Collapse,
+  CollapseItem,
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 // import './styles.scss'
 Vue.use(Input);
 Vue.use(InputNumber);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
 Vue.config.productionTip = false;
 Vue.prototype.cos = function () {
   console.log(123);

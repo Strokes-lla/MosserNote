@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import canvas from '../canvas'
+  import canvas from './canvas'
 
   export default {
     data() {

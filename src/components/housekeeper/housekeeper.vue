@@ -1,22 +1,22 @@
 <template>
-	<div ref="housekeeper" class="box_warpper">
-		<v-menu v-if="menu" class="__relative menu"></v-menu>
-		<v-wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></v-wheelDisc>
-		<div @mousemove="showBubble=true" @mouseout="showBubble=false">
-			<div :class="setClassBubble()"
-					 class="bubble ovhide __relative">
-				<p v-html="speak"></p>
-				<el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
-									placeholder="Please enter here"
-									type="text" size="small" class="mt10"></el-input>
-			</div>
-			<div @click="help()"
-					 @dblclick="awakenWheelDisc"
-					 class="housekeeper inlineBlock pointer __absolute">
-				<div class="__absolute"></div>
-			</div>
-		</div>
-	</div>
+  <div ref="housekeeper" class="box_warpper">
+    <v-menu v-if="menu" class="__relative menu"></v-menu>
+    <v-wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></v-wheelDisc>
+    <div @mousemove="showBubble=true" @mouseout="showBubble=false">
+      <div :class="setClassBubble()"
+           class="bubble ovhide __relative">
+        <p v-html="speak"></p>
+        <el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
+                  placeholder="Please enter here"
+                  type="text" size="small" class="mt10"></el-input>
+      </div>
+      <div @click="help()"
+           @dblclick="awakenWheelDisc"
+           class="housekeeper inlineBlock pointer __absolute">
+        <div class="__absolute"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -134,7 +134,15 @@
             this.reduction()
           }, 300)
         }
-      })
+      });
+
+			// document.onclick = function (e) {
+			//   if (!this.$refs.housekeeper.contains(e.target)) {
+			//     setTimeout(() => {
+			//       this.reduction()
+			//     }, 300)
+			//   }
+			// }
     },
     mounted() {
       this.init();
@@ -143,75 +151,75 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-		z-index: 9999;
-		position: fixed;
-		right: 30px;
-		top: 100px;
+  .box_warpper {
+    z-index: 9999;
+    position: fixed;
+    right: 30px;
+    top: 100px;
 
-		.menu {
-			top: 10px;
-			right: 90px;
-		}
+    .menu {
+      top: 10px;
+      right: 90px;
+    }
 
-		.wheelDisc {
-			top: -65px;
-			left: 80px;
-		}
+    .wheelDisc {
+      top: -65px;
+      left: 80px;
+    }
 
-		.housekeeper {
-			width: 70px;
-			height: 70px;
-			background: rgba(128, 128, 128, 0.75);
-			border-radius: 50%;
-			box-shadow: 2px 3px 10px rgba(255, 255, 255, 0.7);
-			animation: housekeeperJump1 0.7s infinite alternate;
-			top: 0;
-			right: 0;
+    .housekeeper {
+      width: 70px;
+      height: 70px;
+      background: rgba(128, 128, 128, 0.75);
+      border-radius: 50%;
+      box-shadow: 2px 3px 10px rgba(255, 255, 255, 0.7);
+      animation: housekeeperJump1 0.7s infinite alternate;
+      top: 0;
+      right: 0;
 
-			div {
-				border-radius: 50%;
-				width: 50px;
-				height: 50px;
-				top: 50%;
-				left: 50%;
-				animation: housekeeperJump2 0.7s infinite alternate;
-				margin: -24px 0 0 -25px;
-				background: rgba(128, 128, 128, 0.75);
-			}
-		}
+      div {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        animation: housekeeperJump2 0.7s infinite alternate;
+        margin: -24px 0 0 -25px;
+        background: rgba(128, 128, 128, 0.75);
+      }
+    }
 
-		@keyframes housekeeperJump1 {
-			0% {
-				transform: scale(1.25, 1.25);
-			}
-		}
-		@keyframes housekeeperJump2 {
-			0% {
-				transform: scale(0.6, 0.6);
-			}
-		}
+    @keyframes housekeeperJump1 {
+      0% {
+        transform: scale(1.25, 1.25);
+      }
+    }
+    @keyframes housekeeperJump2 {
+      0% {
+        transform: scale(0.6, 0.6);
+      }
+    }
 
-		.bubble {
-			display: block;
-			border-radius: 5px;
-			box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
-			background: white;
-			max-width: 300px;
-			top: 10px;
-			right: 90px;
-			padding: 20px;
-			overflow: hidden;
-		}
+    .bubble {
+      display: block;
+      border-radius: 5px;
+      box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
+      background: white;
+      max-width: 300px;
+      top: 10px;
+      right: 90px;
+      padding: 20px;
+      overflow: hidden;
+    }
 
-		.show {
-			opacity: 1;
-			visibility: visible;
-		}
+    .show {
+      opacity: 1;
+      visibility: visible;
+    }
 
-		.hide {
-			opacity: 0;
-			visibility: hidden;
-		}
-	}
+    .hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 </style>

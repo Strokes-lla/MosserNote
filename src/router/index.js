@@ -22,62 +22,62 @@ const router = new VueRouter({
         {
           path: '/console/Object',
           name: 'Object',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Object'),
+          component: () => import('@/view/console/ECMAScript6/Object'),
         },
         {
           path: '/console/ObjectFunction',
           name: 'ObjectFunction',
-          component: () => import('@/view/console/ECMAScript6/sonPage/ObjectFunction'),
+          component: () => import('@/view/console/ECMAScript6/ObjectFunction'),
         },
         {
           path: '/console/Symbol',
           name: 'Symbol',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Symbol'),
+          component: () => import('@/view/console/ECMAScript6/Symbol'),
         },
         {
           path: '/console/Promise',
           name: 'Promise',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Promise'),
+          component: () => import('@/view/console/ECMAScript6/Promise'),
         },
         {
           path: '/console/Class',
           name: 'Class',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Class'),
+          component: () => import('@/view/console/ECMAScript6/Class'),
         },
         {
           path: '/console/personal',
           name: 'personal',
-          component: () => import('@/view/console/ECMAScript6/sonPage/personal'),
+          component: () => import('@/view/console/ECMAScript6/personal'),
         },
         {
           path: '/console/Set',
           name: 'Set',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Set'),
+          component: () => import('@/view/console/ECMAScript6/Set'),
         },
         {
           path: '/console/Proxy',
           name: 'Proxy',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Proxy'),
+          component: () => import('@/view/console/ECMAScript6/Proxy'),
         },
         {
           path: '/console/Reflect',
           name: 'Reflect',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Reflect'),
+          component: () => import('@/view/console/ECMAScript6/Reflect'),
         },
         {
           path: '/console/Iterator',
           name: 'Iterator',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Iterator'),
+          component: () => import('@/view/console/ECMAScript6/Iterator'),
         },
         {
           path: '/console/Generator',
           name: 'Generator',
-          component: () => import('@/view/console/ECMAScript6/sonPage/Generator'),
+          component: () => import('@/view/console/ECMAScript6/Generator'),
         },
         {
           path: '/console/async',
           name: 'async',
-          component: () => import('@/view/console/ECMAScript6/sonPage/async'),
+          component: () => import('@/view/console/ECMAScript6/async'),
         },
         //Vue
         {
@@ -88,7 +88,7 @@ const router = new VueRouter({
         {
           path: '/console/vuex',
           name: 'vuex',
-          component: () => import('@/view/console/Vue/sonPage/vuex'),
+          component: () => import('@/view/console/Vue/vuex'),
         },
         //Integration
         {
@@ -106,12 +106,12 @@ const router = new VueRouter({
         {
           path: '/console/CanvasBasics',
           name: 'CanvasBasics',
-          component: () => import('@/view/console/Canvas/sonPage/CanvasBasics'),
+          component: () => import('@/view/console/Canvas/CanvasBasics'),
         },
         {
           path: '/console/CanvasRoute',
           name: 'CanvasRoute',
-          component: () => import('@/view/console/Canvas/sonPage/CanvasRoute'),
+          component: () => import('@/view/console/Canvas/CanvasRoute'),
         }],
     },
     {
@@ -133,7 +133,7 @@ const router = new VueRouter({
     // {
     //   path: '*',
     //   name: '404',
-    //   component: () => import('@/view/ECMAScript6/sonPage/Object'),
+    //   component: () => import('@/view/ECMAScript6/Object'),
     // }
   ]
 });

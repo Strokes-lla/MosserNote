@@ -1,5 +1,14 @@
 <template>
   <div :class="!show ? 'disappear':''" class="box_leftList transition2">
+    <div class="__relative mt30">
+      <el-collapse v-for="(item,index) in list" :key="index">
+        <el-collapse-item :title="item.name" :name="index">
+          <p v-for="(v,k) in item.sonList" @click="Jump(v.path)"
+             :style="$route.path===v.path ? {color:'hsla(0, 0%, 100%, .75)'}:''"
+             class="pointer transition2">{{v.name}}</p>
+        </el-collapse-item>
+      </el-collapse>
+    </div>
     <div @click="show=!show" class="switch __absolute tc pointer">
       <span v-show="!show" class="el-icon-right f28"></span>
       <span v-show="show" class="el-icon-back f28"></span>
@@ -9,16 +18,21 @@
 
 <script>
   export default {
+    props: ['list'],
     data() {
       return {
+        route:'',
         show: false,
       }
     },
     filters: {},
-    methods: {},
+    methods: {
+      Jump(path) {
+        this.$router.push(path)
+      }
+    },
     components: {},
     mounted() {
-
     }
   }
 </script>
@@ -32,6 +46,7 @@
     background: #24292e;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
     left: 0;
+    /*overflow-y: scroll;*/
 
     .switch {
       width: 50px;
@@ -45,7 +60,7 @@
 
       span {
         line-height: 50px;
-        color: hsla(0, 0%, 100%, .75);
+        color: white;
       }
     }
   }

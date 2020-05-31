@@ -8,7 +8,7 @@
   export default {
     data() {
       return {
-        BgImg:require("../../../../assets/img/bg_1.jpg")
+        BgImg:require("../../../assets/img/bg_1.jpg")
       }
     },
     filters: {},
