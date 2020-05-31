@@ -1,6 +1,6 @@
 <template>
   <div :class="!show ? 'disappear':''" class="box_leftList transition2">
-    <div class="__relative mt30">
+    <div class="__absolute box">
       <el-collapse v-for="(item,index) in list" :key="index">
         <el-collapse-item :title="item.name" :name="index">
           <p v-for="(v,k) in item.sonList" @click="Jump(v.path)"
@@ -21,7 +21,7 @@
     props: ['list'],
     data() {
       return {
-        route:'',
+        route: '',
         show: false,
       }
     },
@@ -46,7 +46,14 @@
     background: #24292e;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
     left: 0;
-    /*overflow-y: scroll;*/
+
+    > .box {
+      top: 30px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow-y: scroll;
+    }
 
     .switch {
       width: 50px;
