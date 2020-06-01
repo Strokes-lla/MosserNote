@@ -1,5 +1,5 @@
 <template>
-  <div :class="!show ? 'disappear':''" class="box_leftList transition2">
+  <div ref="leftList" :class="!show ? 'disappear':''" class="box_leftList transition2">
     <div class="__absolute box">
       <el-collapse v-for="(item,index) in list" :key="index">
         <el-collapse-item :title="item.name" :name="index">
@@ -32,8 +32,17 @@
       }
     },
     components: {},
+    created() {
+      document.addEventListener('click', (e) => {
+        if (this.$refs.leftList!==undefined&&!this.$refs.leftList.contains(e.target)) {
+          this.show = false;
+        }
+      });
+    },
     mounted() {
-    }
+    },
+    beforeDestroy() {
+    },
   }
 </script>
 
@@ -46,7 +55,7 @@
     background: #24292e;
     box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
     left: 0;
-
+    z-index: 9999;
     > .box {
       top: 30px;
       bottom: 0;

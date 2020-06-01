@@ -123,6 +123,14 @@ const router = new VueRouter({
       path: '/function',
       name: 'function',
       component: () => import('@/view/function/function'),
+      children: [
+        //daily
+        {
+          path: '/function/timeLine',
+          name: 'timeLine',
+          component: () => import('@/view/function/daily/timeLine'),
+        },
+      ],
     },
     //Guitar
     {

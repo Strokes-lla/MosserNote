@@ -5,7 +5,7 @@
       <div class="inlineBlock pointer" @click="Jump(item.url)">
         <img v-if="item.ico!==''" :src="item.ico" class="inlineBlock mr10 __relative" style="top:-1px;"/>
         <img v-else src="../../assets/img/defico.png" class="inlineBlock mr10 __relative" style="top:-1px;"/>
-        <span>{{item.str}}</span>
+        <span :title="item.str">{{item.str}}</span>
       </div>
     </div>
   </div>
@@ -16,6 +16,11 @@
     data() {
       return {
         list: [
+          {
+            ico: 'https://y.qq.com/favicon.ico',
+            str: '五月天-五月天 突然好想见到你 Mayday 2020 live in the sky 线上演唱会 (Live)',
+            url: 'https://y.qq.com/n/yqq/mv/v/k0034mj6ty2.html'
+          },
           {
             ico: 'https://www.avatardata.cn/favicon.ico',
             str: '阿凡达数据',
@@ -167,13 +172,15 @@
 
     .box {
       > div {
+        max-width:350px;
         border-radius: 5px;
         box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
         background: white;
         padding: 20px;
         overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
       }
-
       > div:hover {
         span {
           text-decoration: underline;

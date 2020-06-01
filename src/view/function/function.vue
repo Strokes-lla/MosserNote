@@ -1,17 +1,34 @@
 <template>
-  <div class="box_warpper">
-
+  <div>
+    <v-leftList :list="list"></v-leftList>
+    <div class="box_function">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
+  import leftList from "@/components/leftList.vue"
+
   export default {
     data() {
-      return {}
+      return {
+        list: [{
+          name: 'daily',
+          sonList: [
+            {
+              name: "timeLine",
+              path: "/function/timeLine"
+            }
+          ]
+        }]
+      }
     },
     filters: {},
     methods: {},
-    components: {},
+    components: {
+      'v-leftList': leftList,
+    },
     mounted() {
 
     }
@@ -19,7 +36,7 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_function {
     width: 1000px;
     display: block;
     margin: 0 auto;

@@ -135,18 +135,10 @@
           }, 300)
         }
       });
-
-			// document.onclick = function (e) {
-			//   if (!this.$refs.housekeeper.contains(e.target)) {
-			//     setTimeout(() => {
-			//       this.reduction()
-			//     }, 300)
-			//   }
-			// }
     },
     mounted() {
       this.init();
-    }
+    },
   }
 </script>
 
