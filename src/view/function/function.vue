@@ -30,7 +30,7 @@
       'v-leftList': leftList,
     },
     mounted() {
-
+      console.log('add github test')
     }
   }
 </script>
