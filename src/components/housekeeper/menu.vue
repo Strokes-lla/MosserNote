@@ -17,6 +17,11 @@
       return {
         list: [
           {
+            ico: 'http://www.ruanyifeng.com/favicon.ico',
+            str: '阮一峰个人网站',
+            url: 'http://www.ruanyifeng.com/home.html'
+          },
+          {
             ico: 'https://y.qq.com/favicon.ico',
             str: '五月天-五月天 突然好想见到你 Mayday 2020 live in the sky 线上演唱会 (Live)',
             url: 'https://y.qq.com/n/yqq/mv/v/k0034mj6ty2.html'

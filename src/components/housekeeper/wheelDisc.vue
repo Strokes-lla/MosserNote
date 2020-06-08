@@ -29,7 +29,7 @@
           top: 85,
           left: -15,
         }, {
-          ico: 'https://static.zhihu.com/static/favicon.ico',
+          ico: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1415637350,2159156262&fm=26&gp=0.jpg',
           url: 'https://www.zhihu.com/hot',
           top: 150,
           left: 20,
