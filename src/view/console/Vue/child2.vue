@@ -5,6 +5,7 @@
 </template>
 
 <script>
+  import bus from "./bus";
   export default {
     props:['age'],
     data() {
@@ -17,7 +18,10 @@
       console.log('child2');
       console.log(this.age);
       console.log(this.$attrs);
-      this.$emit('cos')
+      this.$emit('cos');
+      bus.$on('onStatr', (e) => {
+        console.log('on start!!!')
+      })
     }
   }
 </script>

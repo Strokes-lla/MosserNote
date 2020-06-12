@@ -28,6 +28,12 @@ Vue.prototype.cos = function () {
   console.log(123);
   console.log(321)
 };
+// 谨慎使用全局混入，因为它会影响每个单独创建的 Vue 实例 (包括第三方组件)
+// Vue.mixin({
+//   mounted() {
+//     console.log('全局mixin混入')
+//   }
+// });
 new Vue({
   router,
   store,
