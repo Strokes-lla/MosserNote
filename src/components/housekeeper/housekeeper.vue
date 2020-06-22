@@ -3,7 +3,7 @@
     <v-menu v-if="menu" class="__relative menu"></v-menu>
     <v-wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></v-wheelDisc>
     <div @mousemove="showBubble=true" @mouseout="showBubble=false">
-      <div :class="setClassBubble()"
+      <div v-if="isOccupy" :class="setClassBubble()"
            class="bubble ovhide __relative">
         <p v-html="speak"></p>
         <el-input @keydown.enter.native="analysis" v-if="instructionsInput" v-model="instructionsStr"
@@ -156,7 +156,7 @@
 
     .wheelDisc {
       top: -65px;
-      left: 80px;
+      left: 65px;
     }
 
     .housekeeper {

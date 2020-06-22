@@ -93,7 +93,6 @@
       let a = Symbol();
       this.yy[a] = 'yo love';
       console.log(this.yy);
-
       //按位非 适用于其他所有基本数据类型唯独不实用于Symbol
       // console.log(~'1');
 
@@ -179,8 +178,23 @@
       // console.log(Object.getPrototypeOf(data));
       // console.log(data)
 
-      console.log(111111111111);
+      //只有函数对象有prototype对象，普通对象没有
+      //普通对象
+      let fqobj = {
+        name: 'yw',
+        age: 18
+      };
 
+      //函数对象
+      function fq(obj) {
+        this.name = obj.name;
+        this.age = obj.age;
+        fq.prototype.show = 'show f1'
+      }
+
+      let f1 = new fq({name: 'yy', age: 18})
+      console.log(fqobj);
+      console.log(f1);
     }
   }
 </script>
