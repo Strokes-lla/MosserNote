@@ -17,6 +17,21 @@
       return {
         list: [
           {
+            ico: '',
+            str: '管理系统',
+            url: 'http://doc.startdt.net/pages/viewpage.action?pageId=2230509'
+          },
+          {
+            ico: '',
+            str: '奇点云gitLab',
+            url: 'http://git.startdt.net/'
+          },
+          {
+            ico: '',
+            str: '一个听下雨声的网站',
+            url: 'https://rainymood.com/'
+          },
+          {
             ico: 'http://www.ruanyifeng.com/favicon.ico',
             str: '阮一峰个人网站',
             url: 'http://www.ruanyifeng.com/home.html'
@@ -51,9 +66,9 @@
             str: 'vue移动端口访问设置',
             url: 'https://www.jianshu.com/p/93d63e4d679a'
           }, {
-            ico: "https://www.html.cn/favicon.ico",
-            str: 'CSS3 Flexbox 布局完全指南(图解 Flexbox 布局详细教程)',
-            url: 'https://www.html.cn/archives/8629'
+            ico: "http://www.ruanyifeng.com/favicon.ico",
+            str: 'Flex布局教程：语法篇',
+            url: 'http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html'
           }, {
             ico: "https://www.html.cn/favicon.ico",
             str: 'CSS Grid 布局完全指南(图解 Grid 详细教程)',
@@ -177,15 +192,16 @@
 
     .box {
       > div {
-        max-width:350px;
+        max-width: 350px;
         border-radius: 5px;
         box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
         background: white;
         padding: 20px;
         overflow: hidden;
-        white-space:nowrap;
-        text-overflow:ellipsis;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
+
       > div:hover {
         span {
           text-decoration: underline;

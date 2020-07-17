@@ -1,6 +1,5 @@
 <template>
 	<div class="box_warpper">
-
 	</div>
 </template>
 

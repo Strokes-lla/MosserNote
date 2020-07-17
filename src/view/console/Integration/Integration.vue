@@ -1,7 +1,6 @@
 <template>
-	<div class="box_warpper">
-		<div v-if="show" ref="divShow"></div>
-	</div>
+  <div class="box_warpper">
+  </div>
 </template>
 
 <script>
@@ -110,7 +109,7 @@
       };
 
       let num = 0.95;
-      num.testNum(5)
+      num.testNum(5);
 
 
       try {
@@ -226,22 +225,22 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-		.box {
-			width: 500px;
-			height: 500px;
-			position: relative;
+  .box_warpper {
+    .box {
+      width: 500px;
+      height: 500px;
+      position: relative;
 
-			.content {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				/*margin:auto;*/
-				width: 100px;
-				height: 100px;
-				background: red;
-			}
-		}
-	}
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /*margin:auto;*/
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    }
+  }
 </style>

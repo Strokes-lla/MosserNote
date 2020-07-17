@@ -1,6 +1,9 @@
 <template>
-  <div class="box_warpper" style="width: 500px;height:500px;background: red">
+  <div class="box_warpper">
     <p v-for="(item,index) in arr" @click="change(index)">{{item}}</p>
+    <div class="flex" style="width: 500px;height:500px;background: black">
+      <div v-for="item in 20"></div>
+    </div>
   </div>
 </template>
 
@@ -201,5 +204,16 @@
 
 <style lang="less" scoped>
   .box_warpper {
+    .flex{
+      display: flex;
+      justify-content: space-between;
+      align-content: flex-start;
+      flex-wrap:wrap;
+      div{
+        width:40px;
+        height:40px;
+        background:red;
+      }
+    }
   }
 </style>
