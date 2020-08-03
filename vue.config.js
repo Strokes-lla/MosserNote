@@ -6,7 +6,7 @@ module.exports = {
   assetsDir: 'static',
   lintOnSave: false,
   //show Sources
-  productionSourceMap: true,
+  productionSourceMap: false,
   devServer: {
     port: 9521,
     open: false,

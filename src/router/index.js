@@ -130,6 +130,12 @@ const router = new VueRouter({
           name: 'timeLine',
           component: () => import('@/view/function/daily/timeLine'),
         },
+        //tool
+        {
+          path: '/function/svg',
+          name: 'svg',
+          component: () => import('@/view/function/tool/svg'),
+        },
       ],
     },
     //Guitar

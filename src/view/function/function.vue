@@ -21,6 +21,14 @@
               path: "/function/timeLine"
             }
           ]
+        }, {
+          name: 'tool',
+          sonList: [
+            {
+              name: "svg show",
+              path: "/function/svg"
+            }
+          ]
         }]
       }
     },
