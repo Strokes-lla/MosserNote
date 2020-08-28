@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_warpper __relative">
   </div>
 </template>
 
@@ -47,9 +47,6 @@
       //   });
       //   console.log(this.scattering.find((item) => item.index === 0).deg)
       // }, 5000);
-
-
-      let x = [1, 2, 3, 4, 5, 6];
     }
   }
 </script>
@@ -59,7 +56,6 @@
     width: 1000px;
     display: block;
     margin: 0 auto;
-
     min-height: 1300px;
     border-radius: 10px;
     background: rgba(242, 245, 248, 0.95);

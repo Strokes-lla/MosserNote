@@ -2,6 +2,7 @@
   <div ref="housekeeper" class="box_warpper">
     <v-menu v-if="menu" class="__relative menu"></v-menu>
     <v-wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></v-wheelDisc>
+
     <div @mousemove="showBubble=true" @mouseout="showBubble=false">
       <div v-if="isOccupy" :class="setClassBubble()"
            class="bubble ovhide __relative">

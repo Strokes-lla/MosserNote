@@ -18,6 +18,16 @@
         list: [
           {
             ico: '',
+            str: 'css 渐变魔法',
+            url: 'https://www.gradientmagic.com/'
+          },
+          {
+            ico: '',
+            str: '奇点云',
+            url: 'http://test-jenkins.startdt.com/'
+          },
+          {
+            ico: '',
             str: '管理系统',
             url: 'http://doc.startdt.net/pages/viewpage.action?pageId=2230509'
           },
