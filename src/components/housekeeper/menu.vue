@@ -17,6 +17,11 @@
       return {
         list: [
           {
+            ico: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1560855683137/85XtBDDa2.png?auto=format&q=60&fm=png',
+            str: '您可能想使用的10个鲜为人知的Web API',
+            url: 'https://blog.greenroots.info/10-lesser-known-web-apis-you-may-want-to-use-ckejv75cr012y70s158n85yhn'
+          },
+          {
             ico: '',
             str: 'css 渐变魔法',
             url: 'https://www.gradientmagic.com/'
