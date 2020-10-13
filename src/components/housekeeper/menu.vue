@@ -17,6 +17,21 @@
       return {
         list: [
           {
+            ico: 'https://www.airpano.ru/favicon.ico',
+            str: '云旅游',
+            url: 'http://www.airpano.com/360photo/orenburg-shaytan-tau/'
+          },
+          {
+            ico: 'https://www.deepl.com/img/favicon/favicon_16.png',
+            str: 'DeepL 翻译',
+            url: 'https://www.deepl.com/translator'
+          },
+          {
+            ico: 'https://www.wikihow.com/skins/WikiHow/wH-initials_152x152.png',
+            str: 'wikiHow 你可以信赖的万事指南',
+            url: 'https://zh.wikihow.com/%E9%A6%96%E9%A1%B5#'
+          },
+          {
             ico: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1560855683137/85XtBDDa2.png?auto=format&q=60&fm=png',
             str: '您可能想使用的10个鲜为人知的Web API',
             url: 'https://blog.greenroots.info/10-lesser-known-web-apis-you-may-want-to-use-ckejv75cr012y70s158n85yhn'

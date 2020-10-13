@@ -25,7 +25,8 @@
     components: {},
     mounted() {
       this.initMap()
-    }
+    },
+
   }
 </script>
 

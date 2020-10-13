@@ -36,5 +36,6 @@
     border-radius: 10px;
     background: rgba(242, 245, 248, 0.95);
     padding: 10px;
+
   }
 </style>
