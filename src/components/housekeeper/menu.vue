@@ -17,6 +17,11 @@
       return {
         list: [
           {
+            ico: 'https://authing.cn/favicon.ico',
+            str: 'Authing 第三方登录',
+            url: 'https://authing.cn/pricing'
+          },
+          {
             ico: 'https://www.airpano.ru/favicon.ico',
             str: '云旅游',
             url: 'http://www.airpano.com/360photo/orenburg-shaytan-tau/'

@@ -1,9 +1,9 @@
 <template>
   <div class="box_warpper">
     <div class="header __relative">
-      <div @mouseover="showIndex=index" @mouseout="showIndex=''" class="inlineBlock __relative ml18"
-           v-for="(item,index) in list">
-        <span @click="Jump(item.path)" class="f16 pointer transition2">{{item.name}}</span>
+      <div @click="Jump(item.path)" class="inlineBlock __relative transition2 tc" v-for="(item,index) in list"
+           :class="showIndex===index ? 'active':''">
+        <span class="f16 pointer transition2">{{item.name}}</span>
       </div>
       <div class="inlineBlock __absolute headPortrait"></div>
     </div>
@@ -15,7 +15,7 @@
   export default {
     data() {
       return {
-        showIndex: '',
+        showIndex: 0,
         list: [{
           name: 'home',
           path: '/'
@@ -37,7 +37,14 @@
     filters: {},
     methods: {
       Jump(path) {
-        this.$router.push(path)
+        this.$router.push(path);
+      },
+    },
+    watch: {
+      '$route.fullPath': {
+        handler(val) {
+          this.showIndex = this.list.findIndex((item, index) => item.path === val)
+        },
       }
     },
     components: {},
@@ -49,34 +56,47 @@
 <style lang="less" scoped>
   .box_warpper {
     .header {
-      padding: 0 40px;
+      padding: 0 50px;
       width: 100%;
-      height: 72px;
+      height: 48px;
       background: #24292e;
+
       div {
+        width: 130px;
+
         > span {
-          line-height: 72px;
+          line-height: 48px;
           color: #FFF;
         }
       }
 
       div:hover {
+        background: #FFF;
+
         > span {
-          color: hsla(0, 0%, 100%, .75);
+          color: #24292e;
         }
       }
-      .headPortrait{
-        width:35px;
-        height:35px;
-        border-radius:50%;
-        background:red;
-        top:19px;
-        right:30px;
-        background:url('../assets/img/mosser.jpg');
-        background-size:100% 100%;
+
+      .active {
+        background: #FFF;
+
+        > span {
+          color: #24292e;
+        }
+      }
+
+      .headPortrait {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: red;
+        top: 8px;
+        right: 60px;
+        background: url('../assets/img/mosser.jpg');
+        background-size: 100% 100%;
         box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7);
       }
     }
-
   }
 </style>

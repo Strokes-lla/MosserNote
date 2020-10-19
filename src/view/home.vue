@@ -1,14 +1,30 @@
 <template>
-  <div class="box_warpper __relative">
+  <div class="box_warpper">
+    <MaskModular :modularList="modularList"></MaskModular>
   </div>
 </template>
 
 <script>
   import home from "../../api/home"
+  import MaskModular from "../components/MaskModular";
 
   export default {
     data() {
-      return {}
+      return {
+        modularList: [{
+          icon: 'el-icon-user',
+          text: 'Personal experience'
+        }, {
+          icon: 'el-icon-camera',
+          text: 'hobby'
+        }, {
+          icon: 'el-icon-folder',
+          text: 'technology'
+        }, {
+          icon: 'el-icon-magic-stick',
+          text: 'life'
+        }]
+      }
     },
     filters: {},
     methods: {
@@ -16,7 +32,9 @@
         console.log(1)
       }
     },
-    components: {},
+    components: {
+      MaskModular
+    },
     mounted() {
       // home.getData();
       // home.getHtml().then((res)=>{
@@ -29,13 +47,5 @@
 
 <style lang="less" scoped>
   .box_warpper {
-    width: 1000px;
-    display: block;
-    margin: 0 auto;
-    min-height: 1300px;
-    border-radius: 10px;
-    background: rgba(242, 245, 248, 0.95);
-    padding: 10px;
-
   }
 </style>

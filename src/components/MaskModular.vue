@@ -1,0 +1,115 @@
+<template>
+  <div class="box_warpper __absolute flex alignCenter justifyCenter">
+    <div class="mask __absolute">
+      <div class="motto tc">
+        <span class="f36 white">{{motto}}</span>
+      </div>
+      <div class="modularJump tc">
+        <div class="box inlineBlock tc" v-for="(item,index) in modularList">
+          <div class="icon tc">
+            <span class="f28" :class="item.icon"></span>
+          </div>
+          <span class="text f20">{{item.text}}</span>
+        </div>
+      </div>
+    </div>
+    <img :src="url" class="bg __absolute" alt="">
+  </div>
+</template>
+
+<script>
+  export default {
+    props: {
+      modularList: {
+        type: Array,
+        default: () => []
+      }
+    },
+    data() {
+      return {
+        wallpaperList: [
+          'https://w.wallhaven.cc/full/ne/wallhaven-newwwl.jpg',
+          'https://w.wallhaven.cc/full/96/wallhaven-96gqz8.jpg',
+          'https://w.wallhaven.cc/full/nz/wallhaven-nzrvry.jpg',
+          'https://w.wallhaven.cc/full/dg/wallhaven-dg6y63.jpg',
+          'https://w.wallhaven.cc/full/nm/wallhaven-nm51ky.jpg',
+          'https://w.wallhaven.cc/full/eo/wallhaven-eo58dk.jpg',
+          'https://w.wallhaven.cc/full/4v/wallhaven-4v7eel.jpg',
+          'https://w.wallhaven.cc/full/nz/wallhaven-nzem6w.jpg',
+          'https://w.wallhaven.cc/full/r2/wallhaven-r2xrdq.jpg',
+          'https://w.wallhaven.cc/full/zx/wallhaven-zx9ppw.jpg',
+        ],
+        url: '',
+        motto: '“成人不自在，自在不成人”',
+      }
+    },
+    filters: {},
+    methods: {
+      init() {
+        if (navigator.onLine) {
+          this.url = this.wallpaperList[parseInt(Math.random() * 10)]
+        } else {
+          this.url = require('../assets/img/wallpaper/img1.jpg')
+        }
+      },
+    },
+    components: {},
+    mounted() {
+      this.init();
+    }
+  }
+</script>
+
+<style lang="less" scoped>
+  .box_warpper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      padding-top: 170px;
+
+      .motto {
+        width: 100%;
+
+        span {
+
+        }
+      }
+
+      .modularJump {
+        color: white;
+        margin: 220px auto 0 auto;
+
+        .box {
+          width: 200px;
+          vertical-align: top;
+
+          .icon {
+            width: 60px;
+            height: 60px;
+            border: solid 1px white;
+            border-radius: 5px;
+            margin: 0 auto 5px auto;
+
+            span {
+              line-height: 60px;
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      width: 1920px;
+      height: 1080px;
+    }
+  }
+
+</style>

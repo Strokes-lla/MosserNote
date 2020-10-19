@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #F2F5F8;
+  /*background-color: #F2F5F8;*/
   height: 100%;
   color: #333;
 }
@@ -751,4 +751,32 @@ input:disabled {
   -moz-transition: all 0.5s; /* Firefox 4 */
   -webkit-transition: all 0.5s; /* Safari 和 Chrome */
   -o-transition: all 0.5s; /* Opera */
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
 }
