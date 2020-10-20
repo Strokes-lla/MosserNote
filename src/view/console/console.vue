@@ -1,18 +1,31 @@
 <template>
-  <div>
-    <v-leftList :list="list"></v-leftList>
-    <div class="box_console">
-      <router-view/>
-    </div>
+  <div class="box_console">
+    <MaskModular :modularList="modularList"></MaskModular>
   </div>
 </template>
 
 <script>
-  import leftList from "@/components/leftList.vue"
+  import MaskModular from "../../components/MaskModular";
 
   export default {
     data() {
       return {
+        modularList: [{
+          icon: 'E',
+          text: 'ECMAScript6'
+        }, {
+          icon: 'V',
+          text: 'vue'
+        }, {
+          icon: 'I',
+          text: 'Integration'
+        }, {
+          icon: 'H',
+          text: 'highcharts'
+        }, {
+          icon: 'C',
+          text: 'Canvas'
+        }],
         list: [
           {
             name: "ECMAScript6",
@@ -113,7 +126,7 @@
     filters: {},
     methods: {},
     components: {
-      'v-leftList': leftList,
+      MaskModular
     },
     mounted() {
 
@@ -123,13 +136,5 @@
 
 <style lang="less" scoped>
   .box_console {
-    width: 1000px;
-    display: block;
-    margin: 0 auto;
-
-    min-height: 1300px;
-    border-radius: 10px;
-    background: rgba(242, 245, 248, 0.95);
-    padding: 10px;
   }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <v-header></v-header>
-    <v-housekeeper></v-housekeeper>
+    <Headers></Headers>
+    <housekeeper></housekeeper>
     <div class="appContent __absolute">
       <router-view/>
     </div>
@@ -9,24 +9,19 @@
 </template>
 
 <script>
-  import header from "@/components/header"
-  import housekeeper from "@/components/housekeeper/housekeeper.vue"
-  import list from '../static/list';
+  import housekeeper from "./components/housekeeper/housekeeper";
+  import Headers from "./components/Headers";
 
   export default {
     data() {
-      return {
-        list: list
-      }
+      return {}
     },
     components: {
-      'v-header': header,
-      'v-housekeeper': housekeeper,
+      housekeeper,
+      Headers
     },
     methods: {},
     mounted() {
-      // orderShow = [0, 7, 1, 8, 2, 9, 4, 5, 3, 6];
-      // orderShow = [0, 9, 1, 10, 2, 11, 3, 5, 6, 4, 7, 8];
     }
   }
 </script>

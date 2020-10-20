@@ -20,9 +20,6 @@
           name: 'home',
           path: '/'
         }, {
-          name: 'experience',
-          path: '/experience'
-        }, {
           name: 'console',
           path: '/console'
         }, {
@@ -62,27 +59,27 @@
       background: #24292e;
 
       div {
-        width: 130px;
+        width: 125px;
 
         > span {
-          line-height: 48px;
+          line-height: 47px;
           color: #FFF;
         }
       }
 
       div:hover {
-        background: #FFF;
+        border-bottom: solid 1px #FFE300;
 
         > span {
-          color: #24292e;
+          color: #FFE300;
         }
       }
 
       .active {
-        background: #FFF;
+        border-bottom: solid 1px #FFE300;
 
         > span {
-          color: #24292e;
+          color: #FFE300;
         }
       }
 

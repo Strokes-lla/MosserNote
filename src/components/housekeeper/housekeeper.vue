@@ -1,7 +1,7 @@
 <template>
-  <div ref="housekeeper" class="box_warpper">
-    <v-menu v-if="menu" class="__relative menu"></v-menu>
-    <v-wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></v-wheelDisc>
+  <div ref="housekeeper" class="box_warpper animate__animated animate__fadeInRightBig">
+    <menus v-if="menu" class="__relative menu"></menus>
+    <wheelDisc v-if="wheelDisc" class="__relative wheelDisc"></wheelDisc>
 
     <div @mousemove="showBubble=true" @mouseout="showBubble=false">
       <div v-if="isOccupy" :class="setClassBubble()"
@@ -11,10 +11,12 @@
                   placeholder="Please enter here"
                   type="text" size="small" class="mt10"></el-input>
       </div>
-      <div @click="help()"
-           @dblclick="awakenWheelDisc"
+      <div @click="help()" @dblclick="awakenWheelDisc"
            class="housekeeper inlineBlock pointer __absolute">
-        <div class="__absolute"></div>
+        <div class="top __absolute"></div>
+        <div class="center __absolute"></div>
+        <div class="bottom __absolute"></div>
+        <div class="core __absolute"></div>
       </div>
     </div>
   </div>
@@ -22,8 +24,8 @@
 
 <script>
   import home from "../../../api/home"
-  import menu from "@/components/housekeeper/menu.vue"
-  import wheelDisc from "@/components/housekeeper/wheelDisc.vue"
+  import menus from "./menus";
+  import wheelDisc from "./wheelDisc";
   import Cookie from 'js-cookie'
 
   export default {
@@ -125,8 +127,8 @@
       },
     },
     components: {
-      'v-menu': menu,
-      'v-wheelDisc': wheelDisc
+      menus,
+      wheelDisc,
     },
     created() {
       document.addEventListener('click', (e) => {
@@ -138,7 +140,9 @@
       });
     },
     mounted() {
-      this.init();
+      setInterval(() => {
+        this.init();
+      }, 300);
     },
   }
 </script>
@@ -149,47 +153,90 @@
     position: fixed;
     right: 30px;
     top: 100px;
+    animation-delay: 0.3s;
 
     .menu {
-      top: 10px;
-      right: 90px;
+      top: 20px;
+      right: 120px;
     }
 
     .wheelDisc {
-      top: -65px;
-      left: 65px;
+      top: -50px;
+      left: 50px;
     }
 
     .housekeeper {
-      width: 70px;
-      height: 70px;
-      background: rgba(128, 128, 128, 0.75);
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      box-shadow: 2px 3px 10px rgba(255, 255, 255, 0.7);
-      animation: housekeeperJump1 0.7s infinite alternate;
       top: 0;
       right: 0;
 
-      div {
+      .top {
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        top: 50%;
-        left: 50%;
-        animation: housekeeperJump2 0.7s infinite alternate;
-        margin: -24px 0 0 -25px;
-        background: rgba(128, 128, 128, 0.75);
+        background: url('../../assets/img/housekeeper/solid.png') no-repeat;
+        background-size: 100% 100%;
+        animation: housekeeperRotate1 1s infinite linear;
+      }
+
+      .center {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: url('../../assets/img/housekeeper/dotted.png') no-repeat;
+        background-size: 100% 100%;
+        top: 7px;
+        left: 7px;
+        animation: housekeeperRotate2 1s infinite linear;
+      }
+
+      .bottom {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: url('../../assets/img/housekeeper/solid1.png') no-repeat;
+        background-size: 100% 100%;
+        top: 15px;
+        left: 15px;
+        animation: housekeeperRotate1 1s infinite linear;
+      }
+
+      .core {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #FFE300;
+        top: 30px;
+        left: 30px;
+        z-index: 10;
+        animation: housekeeperJump3 0.5s infinite alternate;
       }
     }
 
-    @keyframes housekeeperJump1 {
-      0% {
-        transform: scale(1.25, 1.25);
+    @keyframes housekeeperRotate1 {
+      to {
+        transform: rotate(0deg);
+      }
+      from {
+        transform: rotate(360deg);
       }
     }
-    @keyframes housekeeperJump2 {
-      0% {
-        transform: scale(0.6, 0.6);
+    @keyframes housekeeperRotate2 {
+      to {
+        transform: rotate(360deg);
+      }
+      from {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes housekeeperJump3 {
+      to {
+        transform: scale(1);
+      }
+      from {
+        transform: scale(1.2);
       }
     }
 
@@ -199,8 +246,8 @@
       box-shadow: 0 3px 12px rgba(27, 31, 35, .15), 0 0 1px rgba(27, 31, 35, .2);
       background: white;
       max-width: 300px;
-      top: 10px;
-      right: 90px;
+      top: 20px;
+      right: 120px;
       padding: 20px;
       overflow: hidden;
     }

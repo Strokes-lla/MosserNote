@@ -12,6 +12,14 @@ export default {
 
   //天气查询
   getWeather(str) {
-    return instance.get("http://wthrcdn.etouch.cn/weather_mini?city=" + str)
+    return instance("http://wthrcdn.etouch.cn/weather_mini?city=" + str, {
+      method: 'GET',
+    });
+  },
+  //名人名言
+  getMinYan() {
+    return instance('http://api.tianapi.com/txapi/mingyan/index?key=7e378d999857e3b0eaaf7abc2d594f9f', {
+      method: 'GET',
+    });
   },
 }

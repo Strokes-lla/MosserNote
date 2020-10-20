@@ -1,18 +1,22 @@
 <template>
-  <div>
-    <v-leftList :list="list"></v-leftList>
-    <div class="box_function">
-      <router-view/>
-    </div>
+  <div class="box_function">
+    <MaskModular :modularList="modularList"></MaskModular>
   </div>
 </template>
 
 <script>
-  import leftList from "@/components/leftList.vue"
+  import MaskModular from "../../components/MaskModular";
 
   export default {
     data() {
       return {
+        modularList: [{
+          icon: 'el-icon-time',
+          text: 'timeLine'
+        }, {
+          icon: 'el-icon-thumb',
+          text: 'svg show'
+        }],
         list: [{
           name: 'daily',
           sonList: [
@@ -35,7 +39,7 @@
     filters: {},
     methods: {},
     components: {
-      'v-leftList': leftList,
+      MaskModular
     },
     mounted() {
       console.log('add github test')
@@ -45,13 +49,5 @@
 
 <style lang="less" scoped>
   .box_function {
-    width: 1000px;
-    display: block;
-    margin: 0 auto;
-
-    min-height: 1300px;
-    border-radius: 10px;
-    background: rgba(242, 245, 248, 0.95);
-    padding: 10px;
   }
 </style>

@@ -1,13 +1,16 @@
 <template>
   <div class="box_warpper __absolute flex alignCenter justifyCenter">
     <div class="mask __absolute">
-      <div class="motto tc">
-        <span class="f36 white">{{motto}}</span>
+      <div class="motto tc animate__animated animate__fadeInDown"
+           :style="{animationDelay:(modularList.length*0.2)+'s'}">
+        <span class="f42 white">{{motto}}</span>
       </div>
       <div class="modularJump tc">
-        <div class="box inlineBlock tc" v-for="(item,index) in modularList">
-          <div class="icon tc">
-            <span class="f28" :class="item.icon"></span>
+        <div class="box inlineBlock tc pointer animate__animated animate__fadeInDown"
+             :style="{animationDelay:(index*0.2)+'s'}"
+             v-for="(item,index) in modularList">
+          <div class="icon tc transition2">
+            <span class="f28" :class="item.icon.includes('el') ? item.icon:'bold'">{{!item.icon.includes('el') ? item.icon:''}}</span>
           </div>
           <span class="text f20">{{item.text}}</span>
         </div>
@@ -18,6 +21,8 @@
 </template>
 
 <script>
+  import home from "../../api/home"
+
   export default {
     props: {
       modularList: {
@@ -51,6 +56,9 @@
         } else {
           this.url = require('../assets/img/wallpaper/img1.jpg')
         }
+        home.getMinYan().then((res) => {
+          this.motto = '“' + res.data.newslist[0].content + '”'
+        })
       },
     },
     components: {},
@@ -73,14 +81,11 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
       z-index: 10;
-      padding-top: 170px;
+      padding-top: 180px;
 
       .motto {
-        width: 100%;
-
-        span {
-
-        }
+        width: 1000px;
+        margin: 0 auto;
       }
 
       .modularJump {
@@ -92,15 +97,19 @@
           vertical-align: top;
 
           .icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border: solid 1px white;
             border-radius: 5px;
             margin: 0 auto 5px auto;
 
             span {
-              line-height: 60px;
+              line-height: 50px;
             }
+          }
+
+          .icon:hover {
+            transform: scale(1.1);
           }
         }
       }

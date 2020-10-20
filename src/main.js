@@ -5,7 +5,6 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import '../css/base.css'
-
 import {
   Input,
   InputNumber,
@@ -17,6 +16,8 @@ import {
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 // import './styles.scss'
+import animate from 'animate.css'
+
 Vue.use(Input);
 Vue.use(InputNumber);
 Vue.use(Collapse);

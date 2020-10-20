@@ -17,6 +17,11 @@
       return {
         list: [
           {
+            ico: 'https://animate.style/img/favicon.ico',
+            str: 'Animate',
+            url: 'https://animate.style/'
+          },
+          {
             ico: 'https://authing.cn/favicon.ico',
             str: 'Authing 第三方登录',
             url: 'https://authing.cn/pricing'
