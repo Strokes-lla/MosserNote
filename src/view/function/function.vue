@@ -49,5 +49,6 @@
 
 <style lang="less" scoped>
   .box_function {
+    height: 100%;
   }
 </style>

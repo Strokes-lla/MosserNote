@@ -1,6 +1,7 @@
 <template>
   <div class="box_warpper">
     <MaskModular :modularList="modularList"></MaskModular>
+
   </div>
 </template>
 
@@ -47,5 +48,6 @@
 
 <style lang="less" scoped>
   .box_warpper {
+    height: 100%;
   }
 </style>

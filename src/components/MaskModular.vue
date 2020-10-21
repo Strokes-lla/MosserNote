@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper __absolute flex alignCenter justifyCenter">
+  <div class="box_warpper __relative flex alignCenter justifyCenter">
     <div class="mask __absolute">
       <div class="motto tc animate__animated animate__fadeInDown"
            :style="{animationDelay:(modularList.length*0.2)+'s'}">
@@ -8,6 +8,7 @@
       <div class="modularJump tc">
         <div class="box inlineBlock tc pointer animate__animated animate__fadeInDown"
              :style="{animationDelay:(index*0.2)+'s'}"
+             @click="Jump(index)"
              v-for="(item,index) in modularList">
           <div class="icon tc transition2">
             <span class="f28" :class="item.icon.includes('el') ? item.icon:'bold'">{{!item.icon.includes('el') ? item.icon:''}}</span>
@@ -28,6 +29,10 @@
       modularList: {
         type: Array,
         default: () => []
+      },
+      modularIndex: {
+        type: Number,
+        default: () => null
       }
     },
     data() {
@@ -50,15 +55,24 @@
     },
     filters: {},
     methods: {
+      Jump(index) {
+        this.$emit('update:modularIndex', index)
+      },
       init() {
         if (navigator.onLine) {
           this.url = this.wallpaperList[parseInt(Math.random() * 10)]
         } else {
           this.url = require('../assets/img/wallpaper/img1.jpg')
         }
-        home.getMinYan().then((res) => {
-          this.motto = '“' + res.data.newslist[0].content + '”'
-        })
+        let MinYan = sessionStorage.getItem('MinYan');
+        if (MinYan === null) {
+          home.getMinYan().then((res) => {
+            this.motto = '“' + res.data.newslist[0].content + '”';
+            sessionStorage.setItem('MinYan', this.motto);
+          })
+        } else {
+          this.motto = MinYan
+        }
       },
     },
     components: {},
@@ -70,10 +84,8 @@
 
 <style lang="less" scoped>
   .box_warpper {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 
     .mask {

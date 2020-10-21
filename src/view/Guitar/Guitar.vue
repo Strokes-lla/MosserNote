@@ -28,6 +28,6 @@
 
 <style lang="less" scoped>
   .box_warpper {
-
+    height: 100%;
   }
 </style>
