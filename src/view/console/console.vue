@@ -1,13 +1,19 @@
 <template>
   <div class="box_console">
-    <MaskModular :modularList="modularList" :modularIndex.sync="modularIndex"></MaskModular>
-    <console :modularIndex="modularIndex"></console>
+    <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>
+        <MaskModular :modularList="modularList" @getIndex="getIndex"></MaskModular>
+      </swiper-slide>
+      <swiper-slide>
+        <consoles :modularIndex="modularIndex"></consoles>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
 <script>
   import MaskModular from "../../components/MaskModular";
-  import console from "../../components/console/console";
+  import consoles from "../../components/console/consoles";
 
   export default {
     data() {
@@ -29,15 +35,28 @@
           icon: 'C',
           text: 'Canvas',
         }],
+        swiperOptions: {
+          mousewheel: true,
+          direction: 'vertical',
+        }
       }
     },
     filters: {},
-    methods: {},
+    methods: {
+      getIndex(index) {
+        this.modularIndex = index;
+        this.swiper.slideTo(1, 500, false)
+      }
+    },
     components: {
       MaskModular,
-      console
+      consoles
     },
-    watch: {},
+    computed: {
+      swiper() {
+        return this.$refs.mySwiper.swiper
+      }
+    },
     mounted() {
     }
   }

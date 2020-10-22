@@ -1,6 +1,10 @@
 <template>
   <div class="box_warpper">
-    <MaskModular :modularList="modularList"></MaskModular>
+    <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>
+        <MaskModular :modularList="modularList"></MaskModular>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -14,6 +18,10 @@
           icon: 'el-icon-edit',
           text: 'string'
         }],
+        swiperOptions: {
+          mousewheel: true,
+          direction: 'vertical',
+        }
       }
     },
     filters: {},

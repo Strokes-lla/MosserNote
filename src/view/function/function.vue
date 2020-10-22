@@ -1,6 +1,10 @@
 <template>
   <div class="box_function">
-    <MaskModular :modularList="modularList"></MaskModular>
+    <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>
+        <MaskModular :modularList="modularList"></MaskModular>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -33,7 +37,11 @@
               path: "/function/svg"
             }
           ]
-        }]
+        }],
+        swiperOptions: {
+          mousewheel: true,
+          direction: 'vertical',
+        }
       }
     },
     filters: {},

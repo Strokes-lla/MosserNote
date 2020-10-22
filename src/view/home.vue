@@ -1,7 +1,10 @@
 <template>
   <div class="box_warpper">
-    <MaskModular :modularList="modularList"></MaskModular>
-
+    <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>
+        <MaskModular :modularList="modularList"></MaskModular>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -24,7 +27,11 @@
         }, {
           icon: 'el-icon-magic-stick',
           text: 'life'
-        }]
+        }],
+        swiperOptions: {
+          mousewheel: true,
+          direction: 'vertical',
+        }
       }
     },
     filters: {},

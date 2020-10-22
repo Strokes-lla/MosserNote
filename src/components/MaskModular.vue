@@ -30,10 +30,6 @@
         type: Array,
         default: () => []
       },
-      modularIndex: {
-        type: Number,
-        default: () => null
-      }
     },
     data() {
       return {
@@ -56,7 +52,7 @@
     filters: {},
     methods: {
       Jump(index) {
-        this.$emit('update:modularIndex', index)
+        this.$emit('getIndex', index)
       },
       init() {
         if (navigator.onLine) {

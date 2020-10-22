@@ -6,11 +6,14 @@
 <script>
   export default {
     data() {
-      return {}
+      return {
+      }
     },
     filters: {},
     methods: {},
     components: {},
+    computed: {
+    },
     mounted() {
       let myObject = {
         foo: 1,
