@@ -1,5 +1,5 @@
 <template>
-  <div @[event]="cos()" class="box_warpper">
+  <div @[event]="cos()" class="box_vue __absolute view">
     <p>{{num}}</p>
     <v-child @click.native="cos()" @cos="cos()" :num.sync="num" name="yy" :age="18" sex="n"></v-child>
     <v-slot v-slot="{user}">我是外部插入的文字{{user}}</v-slot>
@@ -46,7 +46,7 @@
     // 开放时需要完全注释<template> 感觉没有多大用
     render(createElement) {
       return createElement('ul', {}, this.list.map(function (item) {
-        return createElement('li',{}, item);
+        return createElement('li', {}, item);
       }));
     },
     mounted() {
@@ -62,6 +62,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_vue {
   }
 </style>

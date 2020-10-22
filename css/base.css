@@ -780,3 +780,14 @@ input:disabled {
 .justifyEnd {
   justify-content: flex-end;
 }
+
+
+.view {
+  width: 1000px;
+  border-radius: 5px;
+  background: rgba(242, 245, 248, 0.95);
+  left: 50%;
+  margin-left: -500px;
+  top: 20px;
+  bottom: 20px;
+}

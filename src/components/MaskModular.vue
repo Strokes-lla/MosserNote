@@ -98,11 +98,12 @@
       .motto {
         width: 1000px;
         margin: 0 auto;
+        height: 250px;
       }
 
       .modularJump {
         color: white;
-        margin: 220px auto 0 auto;
+        margin: 100px auto 0 auto;
 
         .box {
           width: 200px;

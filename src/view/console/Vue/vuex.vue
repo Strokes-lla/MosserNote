@@ -1,10 +1,10 @@
 <template>
-	<div class="box_warpper">
-		<p>{{$store.state.stateA.token}}</p>
-		<p @click="puls">{{token}}</p>
-		<p>{{message}}</p>
-		<input type="text" @input="changeNum" v-model="message">
-	</div>
+  <div class="box_vuex __absolute view">
+    <p>{{$store.state.stateA.token}}</p>
+    <p @click="puls">{{token}}</p>
+    <p>{{message}}</p>
+    <input type="text" @input="changeNum" v-model="message">
+  </div>
 </template>
 
 <script>
@@ -75,6 +75,6 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-	}
+  .box_vuex {
+  }
 </style>

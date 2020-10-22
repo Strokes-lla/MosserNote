@@ -1,7 +1,7 @@
 <template>
-	<div @click="getCoordinate()" class="box_warpper">
-		<v-canvas/>
-	</div>
+  <div @click="getCoordinate()" id="content" class="box_canvasroute __absolute view">
+    <v-canvas/>
+  </div>
 </template>
 
 <script>
@@ -10,8 +10,8 @@
   export default {
     data() {
       return {
-        innerWidth: document.getElementById('content').clientWidth - 20,
-        innerHeight: document.getElementById('content').clientHeight - 20,
+        innerWidth: 0,
+        innerHeight: 0,
         positionX: 0,
         positionY: 0,
         coreX: 0,
@@ -21,13 +21,12 @@
     filters: {},
     methods: {
       getCoordinate() {
-        let scrollTop = document.getElementsByClassName('appContent')[0].scrollTop;
-        let clientWidth = document.getElementsByClassName('appContent')[0].clientWidth;
-        clientWidth = clientWidth > 1100 ? clientWidth : 1100;
+        let scrollTop = document.getElementById('appContent').scrollTop;
+        let clientWidth = document.getElementById('appContent').clientWidth;
         let clientX = event.clientX;
         let clientY = event.clientY;
-        this.positionX = clientX - ((clientWidth - 1100) / 2) - 10;
-        this.positionY = (clientY - 102) + scrollTop;
+        this.positionX = clientX - ((clientWidth - 1000) / 2);
+        this.positionY = (clientY - 68) + scrollTop;
         this.canvas(this.positionX, this.positionY)
       },
       canvas(x, y) {
@@ -63,7 +62,9 @@
         let c = document.getElementById("myCanvas");
         let cxt = c.getContext("2d");
         this.coreX = this.innerWidth / 2;
-        this.coreY = (this.innerHeight / 2) - 200;
+        this.coreY = this.innerHeight / 2;
+        console.log(this.coreX);
+        console.log(this.coreY);
         cxt.fillStyle = "#FF0000";
         cxt.arc(this.coreX, this.coreY, 15, 0, Math.PI * 2, true);
         cxt.fill();
@@ -74,12 +75,18 @@
       'v-canvas': canvas,
     },
     mounted() {
-      this.init()
+      this.$nextTick(() => {
+        this.innerWidth = document.getElementById('content').clientWidth;
+        this.innerHeight = document.getElementById('content').clientHeight;
+        setTimeout(() => {
+          this.init()
+        }, 300)
+      });
     }
   }
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-	}
+  .box_canvasroute {
+  }
 </style>

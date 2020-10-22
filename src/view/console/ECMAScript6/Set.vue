@@ -1,5 +1,5 @@
 <template>
-    <div class="box_warpper">
+    <div class="box_set __absolute view">
       <div class="test" v-for="(item,index) in 20"></div>
     </div>
 </template>
@@ -46,6 +46,6 @@
 </script>
 
 <style lang="less" scoped>
-    .box_warpper {
+    .box_set {
     }
 </style>

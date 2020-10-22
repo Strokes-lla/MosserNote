@@ -1,12 +1,11 @@
 <template>
-	<div class="box_warpper">
-		<img
-						srcset="../../../assets/img/bg_1.jpg 1920w"
-						sizes="(max-width: 440px) 100vw,
+  <div class="box_class __absolute view">
+    <img srcset="../../../assets/img/bg_1.jpg 1920w"
+         sizes="(max-width: 440px) 100vw,
             (max-width: 900px) 33vw,
             1000px"
-						src="../../../assets/img/bg_1.jpg"/>
-	</div>
+         src="../../../assets/img/bg_1.jpg"/>
+  </div>
 </template>
 
 <script>
@@ -226,6 +225,6 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
-	}
+  .box_class {
+  }
 </style>

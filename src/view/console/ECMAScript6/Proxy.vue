@@ -1,5 +1,5 @@
 <template>
-	<div class="box_warpper">
+	<div class="box_proxy __absolute view">
 	</div>
 </template>
 
@@ -40,6 +40,6 @@
 </script>
 
 <style lang="less" scoped>
-	.box_warpper {
+	.box_proxy {
 	}
 </style>

@@ -1,10 +1,12 @@
 <template>
-  <div class="box_warpper __relative" ref="content">
+  <div class="box_warpper __relative" id="appContent" ref="content">
     <div v-for="(item,index) in rendering"
+         @click="Jump(item.path)"
          :style="{opacity:item.opacity,top:item.top+'px',left:item.left+'px',fontSize:item.font+'px',transform:'rotate('+item.deg+'deg)'}"
          :class="!item.Judge ? 'shadow':''"
          class="__absolute white word pointer">{{item.name}}
     </div>
+    <router-view/>
   </div>
 </template>
 
@@ -194,7 +196,7 @@
             sonList: [
               {
                 name: "Canvas基础绘制",
-                path: "/CanvasBasics",
+                path: "/console/CanvasBasics",
                 deg: 0,
                 opacity: 0,
                 top: 0,
@@ -204,7 +206,7 @@
               },
               {
                 name: "Canvas路径",
-                path: "/CanvasRoute",
+                path: "/console/CanvasRoute",
                 deg: 0,
                 opacity: 0,
                 top: 0,
@@ -221,6 +223,9 @@
     },
     filters: {},
     methods: {
+      Jump(path) {
+        this.$router.push(path);
+      },
       RandomNumBoth(Min, Max) {
         let Range = Max - Min;
         let Rand = Math.random();

@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_object __absolute view">
     <p v-for="(item,index) in arr" @click="change(index)">{{item}}</p>
     <div class="flex" style="width: 500px;height:500px;background: black">
       <div v-for="item in 20"></div>
@@ -203,7 +203,7 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_object {
     .flex{
       display: flex;
       justify-content: space-between;

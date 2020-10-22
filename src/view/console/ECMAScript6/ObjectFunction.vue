@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_objectfunction __absolute view">
     <p @click="Jump('/ObjectFunction/Symbol')">Object</p>
     <!--    <router-view></router-view>-->
   </div>
@@ -77,6 +77,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_objectfunction {
   }
 </style>

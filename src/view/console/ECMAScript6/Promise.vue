@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_promise __absolute view">
   </div>
 </template>
 
@@ -59,6 +59,6 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_promise {
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_integration __absolute view">
   </div>
 </template>
 
@@ -225,7 +225,7 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_integration {
     .box {
       width: 500px;
       height: 500px;

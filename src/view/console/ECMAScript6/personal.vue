@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper">
+  <div class="box_personal __absolute view">
     <div></div>
   </div>
 </template>
@@ -23,7 +23,7 @@
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
+  .box_personal {
     .header {
       height: 30px;
     }

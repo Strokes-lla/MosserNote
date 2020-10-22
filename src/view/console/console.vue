@@ -37,8 +37,7 @@
       MaskModular,
       console
     },
-    watch: {
-    },
+    watch: {},
     mounted() {
     }
   }
