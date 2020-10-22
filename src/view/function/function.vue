@@ -39,7 +39,6 @@
           ]
         }],
         swiperOptions: {
-          mousewheel: true,
           direction: 'vertical',
         }
       }

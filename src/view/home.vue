@@ -29,7 +29,6 @@
           text: 'life'
         }],
         swiperOptions: {
-          mousewheel: true,
           direction: 'vertical',
         }
       }

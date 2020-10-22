@@ -36,7 +36,6 @@
           text: 'Canvas',
         }],
         swiperOptions: {
-          mousewheel: true,
           direction: 'vertical',
         }
       }
