@@ -22,6 +22,7 @@
     },
     methods: {},
     mounted() {
+      console.log(new Array(12).fill().map((item, index) => (index + 1) + '月'))
     }
   }
 </script>

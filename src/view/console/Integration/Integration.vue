@@ -226,21 +226,5 @@
 
 <style lang="less" scoped>
   .box_integration {
-    .box {
-      width: 500px;
-      height: 500px;
-      position: relative;
-
-      .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /*margin:auto;*/
-        width: 100px;
-        height: 100px;
-        background: red;
-      }
-    }
   }
 </style>

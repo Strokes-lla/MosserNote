@@ -17,6 +17,16 @@
       return {
         list: [
           {
+            ico: '',
+            str: 'Goobe - 为程序员服务的互联网搜索引擎',
+            url: 'https://goobe.io/'
+          },
+          {
+            ico: 'https://renzhezhilu.gitee.io/kakacss/favicon.png',
+            str: 'KalaCss',
+            url: 'https://renzhezhilu.gitee.io/kakacss/'
+          },
+          {
             ico: 'https://animate.style/img/favicon.ico',
             str: 'Animate',
             url: 'https://animate.style/'

@@ -1,6 +1,6 @@
 // 引入fs文件处理模块
 var fs = require("fs");
-var path = 'img'
+var path = 'img';
 fs.readdir(path, function (err, files) {
   console.log(files)
   files.forEach(function (filename, index) {

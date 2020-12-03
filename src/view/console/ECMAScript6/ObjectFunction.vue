@@ -2,6 +2,7 @@
   <div class="box_objectfunction __absolute view">
     <p @click="Jump('/ObjectFunction/Symbol')">Object</p>
     <!--    <router-view></router-view>-->
+    <div class="bor"></div>
   </div>
 </template>
 
@@ -68,15 +69,21 @@
 
 
       let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
-      console.log(a.slice(0,10))
+      console.log(a.slice(0, 10))
 
       let arr = [1, '', 2, 3, '', 5];
-      console.log([...(arr.map((item)=> item!=""?item:''))])
+      console.log([...(arr.map((item) => item != "" ? item : ''))])
     }
   }
 </script>
 
 <style lang="less" scoped>
   .box_objectfunction {
+    .bor {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border-bottom: 1px solid red;
+    }
   }
 </style>
