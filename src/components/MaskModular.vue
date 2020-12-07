@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper __relative flex alignCenter justifyCenter">
+  <div class="box_warpper __absolute flex alignCenter justifyCenter">
     <div class="mask __absolute">
       <div class="motto tc animate__animated animate__fadeInDown"
            :style="{animationDelay:(modularList.length*0.2)+'s'}">
@@ -127,7 +127,20 @@
     img {
       width: 1920px;
       height: 1080px;
+      transform: scale(1.1, 1.1);
+      animation: myScale 7s infinite alternate linear;
     }
+
+    @keyframes myScale {
+      from {
+        transform: scale(1.1, 1.1);
+      }
+      to {
+        transform: scale(1, 1);
+      }
+    }
+
+
   }
 
 </style>

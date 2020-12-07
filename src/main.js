@@ -17,11 +17,7 @@ import {
 import 'element-ui/lib/theme-chalk/index.css';
 // import './styles.scss'
 import animate from 'animate.css'
-import {swiper, swiperSlide} from 'vue-awesome-swiper'
-import 'swiper/src/swiper.less'
 
-Vue.component('swiper', swiper);
-Vue.component('swiper-slide', swiperSlide);
 Vue.use(Input);
 Vue.use(InputNumber);
 Vue.use(Collapse);

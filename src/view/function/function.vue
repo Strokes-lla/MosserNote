@@ -1,10 +1,6 @@
 <template>
   <div class="box_function">
-    <swiper ref="mySwiper" :options="swiperOptions">
-      <swiper-slide>
-        <MaskModular :modularList="modularList"></MaskModular>
-      </swiper-slide>
-    </swiper>
+    <MaskModular :modularList="modularList"></MaskModular>
   </div>
 </template>
 
@@ -38,9 +34,6 @@
             }
           ]
         }],
-        swiperOptions: {
-          direction: 'vertical',
-        }
       }
     },
     filters: {},
