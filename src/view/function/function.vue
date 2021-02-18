@@ -1,12 +1,13 @@
 <template>
   <div class="box_function">
-    <MaskModular :modularList="modularList"></MaskModular>
+<!--    <MaskModular :modularList="modularList"></MaskModular>-->
+    <SvgShow></SvgShow>
   </div>
 </template>
 
 <script>
   import MaskModular from "../../components/MaskModular";
-
+  import SvgShow from "./tool/svg";
   export default {
     data() {
       return {
@@ -39,7 +40,8 @@
     filters: {},
     methods: {},
     components: {
-      MaskModular
+      MaskModular,
+      SvgShow
     },
     mounted() {
       console.log('add github test')
@@ -50,5 +52,6 @@
 <style lang="less" scoped>
   .box_function {
     height: 100%;
+    width:100%;
   }
 </style>

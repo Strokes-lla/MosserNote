@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper __absolute flex alignCenter justifyCenter">
+  <div class="box_warpper __relative flex alignCenter justifyCenter">
     <div class="mask __absolute">
       <div class="motto tc animate__animated animate__fadeInDown"
            :style="{animationDelay:(modularList.length*0.2)+'s'}">

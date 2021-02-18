@@ -1,6 +1,5 @@
 <template>
   <div class="box_generator __absolute view">
-
   </div>
 </template>
 

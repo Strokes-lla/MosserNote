@@ -18,6 +18,31 @@
         list: [
           {
             ico: '',
+            str: '色輪、調色盤產生器 | Adobe Color',
+            url: 'https://color.adobe.com/zh/create/color-wheel'
+          },
+          {
+            ico: 'https://www.remove.bg/favicon-32x32.png',
+            str: '消除图片中的背景 – remove.bg',
+            url: 'https://www.remove.bg/zh'
+          },
+          {
+            ico: 'https://www.pexels.com/favicon.ico',
+            str: '免费素材图片',
+            url: 'https://www.pexels.com/zh-cn/'
+          },
+          {
+            ico: 'http://report.seedsufe.com/favicon.ico',
+            str: '报告查一查',
+            url: 'http://report.seedsufe.com/#/report'
+          },
+          {
+            ico: 'https://myicon.io/favicons/apple-touch-icon.png',
+            str: 'My Icon',
+            url: 'https://myicon.io/'
+          },
+          {
+            ico: '',
             str: 'Goobe - 为程序员服务的互联网搜索引擎',
             url: 'https://goobe.io/'
           },

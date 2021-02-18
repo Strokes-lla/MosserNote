@@ -51,7 +51,7 @@
     },
     mounted() {
       console.log(this.$route.params);
-      console.log(this.$refs.testRef)
+      console.log(this.$refs.testRef);
       // this.$router.push({path: '/'}, (res) => {
       //   console.log(res)
       // }, (res) => {

@@ -1,5 +1,5 @@
 <template>
-  <div class="box_warpper __absolute" id="appContent" ref="content">
+  <div class="box_warpper __relative" id="appContent" ref="content">
     <div v-for="(item,index) in rendering"
          @click="Jump(item.path)"
          :style="{opacity:item.opacity,top:item.top+'px',left:item.left+'px',fontSize:item.font+'px',transform:'rotate('+item.deg+'deg)'}"

@@ -1,7 +1,7 @@
 <template>
   <div class="box_warpper">
     <span @click="addNum()">child.vue</span>
-    <v-child2 v-on="$listeners" v-bind="$attrs"></v-child2>
+    <v-child2 v-on="$listeners"></v-child2>
   </div>
 </template>
 
@@ -11,7 +11,9 @@
   export default {
     props: ['name', 'num'],
     data() {
-      return {}
+      return {
+        show:'yyyy'
+      }
     },
     filters: {},
     methods: {

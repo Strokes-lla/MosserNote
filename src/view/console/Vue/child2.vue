@@ -6,8 +6,8 @@
 
 <script>
   import bus from "./bus";
+
   export default {
-    props:['age'],
     data() {
       return {}
     },
