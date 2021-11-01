@@ -1,6 +1,6 @@
 <template>
   <div class="box_console">
-    <MaskModular :modularList="modularList" @getIndex="getIndex"></MaskModular>
+<!--    <MaskModular :modularList="modularList" @getIndex="getIndex"></MaskModular>-->
     <consoles :modularIndex="modularIndex"></consoles>
     <!--    top::-webkit-scrollbar-->
   </div>

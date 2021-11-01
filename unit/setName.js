@@ -8,7 +8,7 @@ fs.readdir(path, function (err, files) {
     let newPath = path + '/' + filename.replace(/副本/g, '');
 
     // fs.rename(oldPath, newPath, callback)
-    fs.rename(oldPath, path + '/' + "vislab_img_" + index + '.png', function (err) {
+    fs.rename(oldPath, path + '/' + "img_" + index + '.png', function (err) {
       if (!err) {
         console.log(filename + '副本替换成功!')
       }
